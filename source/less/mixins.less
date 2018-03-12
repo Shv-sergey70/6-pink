@@ -1,0 +1,7 @@
+.font(@fontName; @weight: normal; @style: normal) {
+  font-family: '@{fontName}';
+  src: url('../fonts/@{fontName}.woff') format('woff'),
+    url('../fonts/@{fontName}.woff2') format('woff2');
+  font-weight: @weight;
+  font-style: @style;
+}
