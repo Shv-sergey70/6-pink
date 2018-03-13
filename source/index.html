@@ -7,16 +7,35 @@
   </head>
   <body>
     <header class="page-header">
-      <section class="main-nav">
-        <ul class="main-nav__list">
-          <li><a class="main-nav__item main-nav--logo" href="#">PINK</a></li>
-          <li><a class="main-nav__item" href="#">Главная</a></li>
-          <li><a class="main-nav__item" href="#">Фотографии</a></li>
-          <li><a class="main-nav__item" href="#">Конкурс</a></li>
-          <li><a class="main-nav__item" href="#">HTML Academy</a></li>
-        </ul>
-      </section>
+      <div class="page-header__wrapper">
+        <nav class="main-nav main-nav--closed">
+          <button class="main-nav__toggle" type="button"></button>
+          <a class="main-nav__logo" href="#"><img src="img/logotype-white-mobile.png" width="75" height="22"></a>
+          <ul class="main-nav__list">
+            <li class="main-nav__item"><a class="main-nav__href main-nav__href--second" href="#">Главная</a></li>
+            <li class="main-nav__item"><a class="main-nav__href main-nav__href--third" href="#">Фотографии</a></li>
+            <li class="main-nav__item"><a class="main-nav__href main-nav__href--fourth" href="#">Конкурс</a></li>
+            <li class="main-nav__item"><a class="main-nav__href main-nav__href--fifth" href="#">HTML Academy</a></li>
+          </ul>
+        </nav>
+        <img class="page-header__phone-picture" src="img/mobile-title-bg.png" width="320" height="314">
+      </div>
 
     </header>
   </body>
+  <script>
+  var mainNavToggle = document.querySelector(".main-nav__toggle");
+  var mainNav = document.querySelector(".main-nav");
+
+  mainNavToggle.addEventListener("click", function() {
+    if (mainNav.classList.contains("main-nav--closed")) {
+      mainNav.classList.remove("main-nav--closed");
+      mainNav.classList.add("main-nav--opened");
+    }
+    else {
+      mainNav.classList.add("main-nav--closed");
+      mainNav.classList.remove("main-nav--opened");
+    }
+  });
+  </script>
 </html>
