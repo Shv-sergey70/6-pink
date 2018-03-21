@@ -4,36 +4,100 @@
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
     <link rel="stylesheet" href="css/style.css"> <!-- Подключаем CSS -->
+    <!-- Pixel Glass -->
+<style>
+  HTML {
+    background-repeat: no-repeat;
+    background-position:  50% 0;
+    /* По умолчанию мобильный макет */
+    background-image: url( "img/Makets/pink-index-mobile-closed.png" );
+    zoom: 100%;
+  }
+  /* Планшет */
+  @media (min-width: 660px) {
+    HTML {
+      /* Планшетный макет */
+      background-image: url( "img/Makets/pink-index-tablet-closed.png" );
+    }
+  }
+  /* Десктоп */
+  @media (min-width: 1200px) {
+    HTML {
+      /* Десктопный макет */
+      background-image: url( "img/Makets/pink-index-desktop.png" );
+    }
+  }
+
+  BODY {
+    opacity: .5;
+  }
+</style>
+<link rel="stylesheet" href="../node_modules/pixel-glass/styles.css">
+<script src="../node_modules/pixel-glass/script.js"></script>
+<!-- // Pixel Glass -->
   </head>
   <body>
     <header class="page-header">
       <div class="page-header__wrapper">
-        <nav class="main-nav main-nav--closed">
-          <button class="main-nav__toggle" type="button"></button>
-          <a class="main-nav__logo" href="#"><img src="img/logotype-white-mobile.png" width="75" height="22"></a>
-          <ul class="main-nav__list">
-            <li class="main-nav__item"><a class="main-nav__href main-nav__href--second" href="#">Главная</a></li>
-            <li class="main-nav__item"><a class="main-nav__href main-nav__href--third" href="#">Фотографии</a></li>
-            <li class="main-nav__item"><a class="main-nav__href main-nav__href--fourth" href="#">Конкурс</a></li>
-            <li class="main-nav__item"><a class="main-nav__href main-nav__href--fifth" href="#">HTML Academy</a></li>
-          </ul>
+        <nav class="main-nav main-nav--closed main-nav--nojs">
+          <div class="main-nav__wrapper">
+            <button class="main-nav__toggle" type="button">
+              <span class="visually-hidden">Открыть меню</span>
+            </button>
+            <div class="main-nav__content">
+              <div class="main-nav__logo-wrapper">
+                <a class="main-nav__logo"></a>
+              </div>
+              <div class="main-nav__menu-wrapper">
+                <ul class="main-nav__list">
+                  <li class="main-nav__item"><a class="main-nav__link main-nav--active">Главная</a></li>
+                  <li class="main-nav__item"><a class="main-nav__link" href="#">Фотографии</a></li>
+                  <li class="main-nav__item"><a class="main-nav__link" href="#">Конкурс</a></li>
+                  <li class="main-nav__item"><a class="main-nav__link" href="#">HTML Academy</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </nav>
-        <img class="page-header__phone-picture" src="img/mobile-title-bg.png" width="320" height="314">
+        <section class="page-header-content">
+          <section class="page-header-content__description">
+            <h2 class="page-header-content__title">Взгляните<br>на жизнь<br>иначе!</h2>
+            <a class="page-header-content__btn" href="#">Скачать приложения</a>
+            <section class="page-header-content__icons" id="here">
+              <a class="page-header-content__apple" href="#"><img src="img/apple-logo.png" width="47" height="56"></a>
+              <a class="page-header-content__android" href="#"><img src="img/android-logo.png" width="43" height="47"></a>
+              <a class="page-header-content__microsoft" href="#"><img src="img/microsoft-logo.png" width="44" height="41"></a>
+            </section>
+            <p class="page-header-content__text">Доступно для iPhone, iPad, Android,<br> Windows Phone, OS X, Windows 8</p>
+          </section>
+        </section>
       </div>
-      <section class="page-header-bottom">
-        <a class="page-header-bottom__btn" href="#">Скачать приложение</a>
-        <div class="page-header-bottom__devices">
-          <a class="page-header-bottom__apple" href="#"><img src="img/apple-logo.png" width="47" height="56"></a>
-          <a class="page-header-bottom__android" href="#"><img src="img/android-logo.png" width="43" height="47"></a>
-          <a class="page-header-bottom__microsoft" href="#"><img src="img/microsoft-logo.png" width="44" height="41"></a>
-        </div>
-        <p class="page-header-bottom__description">Доступно для iPhone, iPad, Android,<br> Windows Phone, OS X, Windows 8</p>
-      </section>
+      <section class="mobile-wrapper"></section>
     </header>
+    <main>
+      <section class="main-offer">
+        <section class="main-offer__title">
+          <h2 class="main-offer__title-1">Устали от серости мегаполиса?</h2>
+          <h2 class="main-offer__title-2">Нам есть, что вам предложить!</h2>
+        </section>
+        <div class="main-offer__bg-line"></div>
+        <section class="main-offer__features">
+        </section>
+      </section>
+    </main>
+
+
+
+
+
+
+
   </body>
   <script>
   var mainNavToggle = document.querySelector(".main-nav__toggle");
   var mainNav = document.querySelector(".main-nav");
+
+  mainNav.classList.remove("main-nav--nojs");
 
   mainNavToggle.addEventListener("click", function() {
     if (mainNav.classList.contains("main-nav--closed")) {

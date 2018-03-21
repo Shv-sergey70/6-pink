@@ -20,5 +20,9 @@
   ],
   "engines": {
     "node": "8.9"
+  },
+  "dependencies": {
+    "pixel-glass": "^1.0.13",
+    "save-dev": "^2.0.0"
   }
 }

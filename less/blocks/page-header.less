@@ -1,0 +1,71 @@
+.page-header {
+  background-color: #1d2631;
+}
+
+.page-header__wrapper {
+  position: relative;
+  width: 320px;
+  min-height: 462px;
+  background-image: url("../img/back-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.page-header__phone-picture {
+  position: absolute;
+  z-index: 5;
+  bottom: -28px;
+  background-image: url("../img/mobile-title-bg.png");
+  width: 320px;
+  height: 314px;
+}
+
+@media (min-width:@tablet-width) {
+
+  .page-header {
+    position: relative;
+  }
+
+  .page-header__wrapper {
+    width: 660px;
+    min-height: 727px;
+    background-image: url("../img/back-tablet@1x.jpg");
+    background-size: cover;
+  }
+
+  .page-header__phone-picture {
+    position: absolute;
+    z-index: 5;
+    bottom: -2px;
+    background-image: url("../img/tablet-title-bg.png");
+    width: 660px;
+    height: 545px;
+  }
+}
+
+@media (min-width:@desktop-width) {
+
+  .page-header::before {
+    content: "";
+    display: block;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 110px;
+    z-index: 10;
+  }
+
+  .page-header__wrapper {
+    min-height: 727px;
+    width: auto;
+    background-image: url("../img/bg-back-desktop.jpg");
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+
+  .page-header--container {
+    min-width: 1200px;
+    padding: 0 130px;
+    margin: 0 auto;
+  }
+}

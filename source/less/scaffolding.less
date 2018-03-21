@@ -2,6 +2,27 @@ body {
   min-width: 320px;
 }
 
+@media (min-width: @tablet-width) {
+  body {
+    min-width: 660px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  body {
+    min-width: 960px;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0px;
+}
+
 @font-face {
   .font(@fontRegular, normal, normal);
 }

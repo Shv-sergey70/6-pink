@@ -1,16 +1,11 @@
 .page-header {
-  background-color: #1d2631;
+  display: flex;
+  flex-direction: column;
 }
 .page-header__wrapper {
-  position: relative;
-  width: 320px;
-  min-height: 462px;
-  background-image: url("../img/back-mobile@1x.jpg");
+  background-color: #1d2631;
+  background-image: url("../img/bg-back-mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-}
-.page-header__phone-picture {
-  position: absolute;
-  z-index: 5;
-  bottom: -28px;
+  background-position: 100% 50%;
 }
