@@ -1,0 +1,125 @@
+.research {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .research {
+    display: block;
+    background-color: #ffffff;
+  }
+
+  .research__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 620px;
+    margin: 0 auto;
+  }
+
+  .research__picture {
+    width: 238px;
+    height: 276px;
+    background-image: url("../img/tablet-research-picture.png");
+    background-repeat: no-repeat;
+    margin-top: 59px;
+    margin-bottom: 50px;
+  }
+
+  .research__description {
+    width: 310px;
+  }
+
+  .research__title {
+    display: block;
+    width: 170px;
+    font-size: 30px;
+    line-height: 36px;
+    color: #000000;
+    .font(@fontBold, bold);
+    margin: 0;
+    margin-top: 97px;
+  }
+
+  .research__text {
+    display: block;
+    width: 300px;
+    font-size: 14px;
+    line-height: 24px;
+    color: #283645;
+    .font(@fontRegular, normal, normal);
+    margin: 0;
+    margin-top: 10px;
+  }
+
+  .research__link {
+    display: block;
+    color: #d22856;
+    .font(@fontRegular, normal, normal);
+    font-size: 14px;
+    line-height: 24px;
+    margin-top: 10px;
+  }
+
+  .research__empty--desktop {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .research {
+    display: block;
+    background-color: #f2f2f2;
+  }
+
+  .research__wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 940px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .research__picture {
+    width: 298px;
+    height: 345px;
+    background-image: url("../img/desktop-research-picture.png");
+    background-repeat: no-repeat;
+    margin-top: 26px;
+    margin-bottom: 50px;
+  }
+
+  .research__description {
+    width: 573px;
+  }
+
+  .research__title {
+    width: 300px;
+    line-height: 30px;
+    margin-top: 119px;
+  }
+
+  .research__text {
+    width: 531px;
+    font-size: 18px;
+    line-height: 30px;
+    margin-top: 25px;
+  }
+
+  .research__link {
+    font-size: 18px;
+    line-height: 30px;
+    margin-top: 30px;
+  }
+
+
+  .research__tablet {
+    display: none;
+  }
+
+  .research__empty {
+    display: none;
+  }
+
+  .research__empty--desktop {
+    display: inline;
+  }
+}

@@ -1,0 +1,213 @@
+.main-features {
+  margin-top: -20px;
+  background-color: #f2f2f2;
+  background-image: url("../img/bg-line.svg");
+  background-repeat: no-repeat;
+}
+
+.main-features__cards {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 102px;
+}
+
+.main-features__card:last-child::after {
+  content: "";
+  display: block;
+  background-image: url("../img/mobile-features-iphone.png");
+  width: 157px;
+  height: 320px;
+  margin: 0 auto;
+  margin-top: 42px;
+}
+
+.main-features__card-title {
+  .font(@fontBold, bold);
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+  margin: 0;
+  margin-top: 33px;
+}
+
+.main-features__description {
+  font-size: 14px;
+  line-height: 24px;
+  color: #283645;
+  .font(@fontRegular, normal, normal);
+  margin: 0;
+  margin-top: 10px;
+}
+
+.main-features__empty {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .main-features {
+    margin-top: 0px;
+  }
+
+  .main-features__wrapper {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    width: 620px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto;
+  }
+
+  .main-features__cards {
+    display: flex;
+    flex-direction: column;
+    width: 310px;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: left;
+    margin: 0;
+    padding-top: 85px;
+  }
+
+  .main-features__card:nth-child(2) {
+    margin-top: 2px;
+  }
+
+  .main-features__card:nth-child(3) {
+    margin-top: 0px;
+    padding-bottom: 42px;
+  }
+
+  .main-features__card:last-child::after {
+    position: absolute;
+    display: block;
+    top: 10px;
+    left: 20px;
+    background-image: url("../img/tablet-features-iphone.png");
+    width: 268px;
+    height: 479px;
+  }
+
+  .main-features__card-title {
+    margin-top: 34px;
+  }
+
+  .main-features__description {
+    margin-top: 12px;
+  }
+
+  .main-features__empty {
+    display: inline;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-features {
+    margin-top: 0px;
+  }
+
+  .main-features__wrapper {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    width: 960px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .main-features__cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 940px;
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+    padding-top: 400px;
+  }
+
+  .main-features__card {
+    width: 240px;
+  }
+
+  .main-features__card:nth-child(1) {
+    margin-left: 20px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -322px;
+      left: -27px;
+      background-image: url("../img/desktop-feature-1.png");
+      background-repeat: no-repeat;
+      width: 294px;
+      height: 302px;
+    }
+  }
+
+  .main-features__card:nth-child(2) {
+    margin-top: 0px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -322px;
+      left: -27px;
+      background-image: url("../img/desktop-feature-2.png");
+      background-repeat: no-repeat;
+      width: 294px;
+      height: 302px;
+    }
+  }
+
+  .main-features__card:nth-child(3) {
+    margin-right: 40px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -322px;
+      left: -27px;
+      background-image: url("../img/desktop-feature-3.png");
+      background-repeat: no-repeat;
+      width: 294px;
+      height: 302px;
+    }
+  }
+
+  .main-features__card:last-child::after {
+    position: absolute;
+    display: none;
+    top: 10px;
+    left: 20px;
+    background-image: url("../img/tablet-features-iphone.png");
+    width: 268px;
+    height: 547px;
+  }
+
+  .main-features__card-title {
+    font-size: 30px;
+    line-height: 30px;
+    color: #000000;
+    margin-top: 34px;
+  }
+
+  .main-features__description {
+    margin-top: 23px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .main-features__empty {
+    display: none;
+  }
+
+}
