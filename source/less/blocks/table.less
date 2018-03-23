@@ -1,0 +1,204 @@
+.price {
+  background-color: #f2f2f2;
+  background-image: url("../img/bg-line.svg");
+  background-repeat: no-repeat;
+  margin-top: -40px;
+}
+
+.price__wrapper {
+  width: 280px;
+  padding-left: 20px;
+  padding-right: 20px;
+  overflow: hidden;
+  margin: 0 auto;
+  padding-top: 158px;
+}
+
+.price__table {
+  width: 832px;
+  border-collapse: collapse;
+  transform: translateX(-276px);
+}
+
+.price__caption-title {
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  line-height: 30px;
+  color: #ffffff;
+  .font(@fontBold, bold);
+  text-transform: uppercase;
+  margin: 0;
+  margin-top: 16px;
+}
+
+.price__caption-cost {
+  display: block;
+  text-align: center;
+  font-size: 24px;
+  line-height: 30px;
+  color: #ffffff;
+  .font(@fontLight, light);
+  text-transform: uppercase;
+  margin: 0;
+  margin-top: 2px;
+  margin-bottom: 20px;
+}
+
+.price__caption,
+.price__content {
+  border: 2px solid #e5e5e5;
+  border-top: none;
+}
+
+.price__caption {
+  background-color: #283645;
+  border-bottom: none;
+}
+
+.price__left-title {
+  font-size: 14px;
+  line-height: 30px;
+  color: #283645;
+  .font(@fontRegular, normal, normal);
+  margin: 0;
+  background-color: blue;
+}
+
+.price__caption-title--hit {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: -2px;
+    width: 74px;
+    height: 73px;
+    background-image: url("../img/mobile-table-hit.png");
+    background-repeat: no-repeat;
+  }
+}
+
+.price__content {
+ position: relative;
+ height: 59px;
+}
+
+.price__tbody .price__table-row:nth-child(2) .price__content:not(:first-child) {
+  &::before {
+    content: "Розовый фильтр";
+    .mobile-table-pseudoelement;
+    top: 14px;
+  }
+}
+
+.price__tbody .price__table-row:nth-child(3) .price__content:not(:first-child) {
+  &::before {
+    content: "Смайлики";
+    .mobile-table-pseudoelement;
+    top: 15px;
+  }
+}
+
+.price__tbody .price__table-row:nth-child(4) .price__content:not(:first-child) {
+  &::before {
+    content: "Комментарии";
+    .mobile-table-pseudoelement;
+    top: 15px;
+  }
+}
+
+.price__true {
+  position: absolute;
+  right: 16px;
+  top: 20px;
+  background-image: url("../img/table-yes.png");
+  background-repeat: no-repeat;
+  width: 31px;
+  height: 21px;
+}
+
+.price__false {
+  position: absolute;
+  right: 17px;
+  top: 15px;
+  background-image: url("../img/table-no.png");
+  background-repeat: no-repeat;
+  width: 27px;
+  height: 26px;
+}
+
+//Убираем первую колонку таблицы в мобильной версии
+.price__caption--hidden,
+.price__content-hidden {
+  display: none;
+}
+
+//Задаем ширины колонок
+.price__table-row td {
+  &:nth-child(1) {
+    width: 0px;
+  }
+  &:nth-child(2) {
+    width: 278px;
+  }
+  &:nth-child(3) {
+    width: 278px;
+  }
+  &:nth-child(4) {
+    width: 278px;
+  }
+}
+
+//Слайдер мобильной версии таблицы:
+#table__radio-1,
+#table__radio-2,
+#table__radio-3 {
+  display: none;
+}
+
+.table__control {
+  display: flex;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.table__label {
+  display: block;
+  background-color: #bec2c7;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  margin-top: 40px;
+  border: 3px solid #f2f2f2;
+
+  &:nth-child(2) {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+}
+
+#table__radio-1:checked ~ .price__wrapper .price__table {
+  transform: translate(0);
+  transition: 0.5s;
+}
+
+#table__radio-2:checked ~ .price__wrapper .price__table {
+  transform: translateX(-276px);
+  transition: 0.5s;
+}
+
+#table__radio-3:checked ~ .price__wrapper .price__table {
+  transform: translateX(-552px);
+  transition: 0.5s;
+}
+
+#table__radio-1:checked ~ .table__control label[for="table__radio-1"],
+#table__radio-2:checked ~ .table__control label[for="table__radio-2"],
+#table__radio-3:checked ~ .table__control label[for="table__radio-3"] {
+  border: 3px solid #283645;
+  background-color: #ffffff;
+}
