@@ -1,5 +1,286 @@
-.feedback {
-  width: 300px;
+.test {
+  display: block;
+  width: 100px;
   height: 100px;
+  background-color: violet;
+}
+
+.feedback {
   background-color: #ffffff;
+}
+
+.feedback__wrapper {
+  width: 280px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+}
+
+.feedback__slides {
+  display: flex;
+  overflow: hidden;
+}
+
+.feedback__slide {
+  background-color: #ffffff;
+  width: 280px;
+  text-align: center;
+  flex-shrink: 0;
+  margin-top: 42px;
+}
+
+.feedback__author {
+  display: block;
+  font-size: 18px;
+  line-height: 30px;
+  color: #000000;
+  .font(@fontBold, bold);
+  margin: 0;
+}
+
+.feedback__author-data {
+  display: none;
+}
+
+.feedback__description {
+  display: block;
+  font-size: 14px;
+  line-height: 30px;
+  color: #283645;
+  .font(@fontRegular, normal, normal);
+  margin: 0;
+  margin-top: 13px;
+}
+
+#feedback__radio-1,
+#feedback__radio-2,
+#feedback__radio-3 {
+  display: none;
+}
+
+.feedback__control {
+  display: flex;
+  width: 100px;
+  height: 60px;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.feedback__label {
+  display: block;
+  background-color: #bec2c7;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  margin-top: 32px;
+  border: 3px solid #ffffff;
+
+  &:nth-child(2) {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+}
+
+#feedback__radio-1:checked ~ .feedback__slides .feedback__slide:nth-child(1) {
+  transform: translate(0);
+}
+
+#feedback__radio-2:checked ~ .feedback__slides .feedback__slide:nth-child(2) {
+  transform: translateX(-280px);
+}
+
+#feedback__radio-3:checked ~ .feedback__slides .feedback__slide:nth-child(3) {
+  transform: translateX(-560px);
+}
+
+#feedback__radio-1:checked ~ .feedback__control label[for="feedback__radio-1"],
+#feedback__radio-2:checked ~ .feedback__control label[for="feedback__radio-2"],
+#feedback__radio-3:checked ~ .feedback__control label[for="feedback__radio-3"] {
+  border: 3px solid #283645;
+  background-color: #ffffff;
+}
+
+.feedback__control-arrow {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .feedback__wrapper {
+    width: 620px;
+  }
+
+  .feedback__slides {
+    display: flex;
+    overflow: hidden;
+  }
+
+  .feedback__slide {
+    display: flex;
+    flex-direction: column;
+    width: 620px;
+    text-align: center;
+    flex-shrink: 0;
+    margin-top: 42px;
+  }
+
+  .feedback__author {
+    font-size: 20px;
+    margin: 0;
+    margin-top: 35px;
+    order: 2;
+  }
+
+  .feedback__author-data {
+    display: block;
+    font-size: 14px;
+    line-height: 30px;
+    color: #283645;
+    .font(@fontRegular, normal, normal);
+    order: 3;
+    margin: 0;
+    margin-top: 2px;
+  }
+
+  .feedback__description {
+    font-size: 18px;
+    margin-top: 6px;
+  }
+
+  #feedback__radio-1:checked ~ .feedback__slides .feedback__slide:nth-child(1) {
+    transform: translate(0);
+  }
+
+  #feedback__radio-2:checked ~ .feedback__slides .feedback__slide:nth-child(2) {
+    transform: translateX(-620px);
+  }
+
+  #feedback__radio-3:checked ~ .feedback__slides .feedback__slide:nth-child(3) {
+    transform: translateX(-1240px);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .feedback__wrapper {
+    position: relative;
+    width: 940px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .feedback__slides {
+    width: 940px;
+    display: flex;
+    overflow: hidden;
+  }
+
+  .feedback__slide {
+    width: 940px;
+    margin-top: 60px;
+    padding-top: 119px;
+  }
+
+  .feedback__author {
+    font-size: 24px;
+    margin-top: 36px;
+  }
+
+  .feedback__author-data {
+    font-size: 18px;
+    margin-top: 2px;
+  }
+
+  .feedback__description {
+    position: relative;
+    width: 700px;
+    margin: 0 auto;
+    font-size: 18px;
+    margin-top: 6px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -113px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      width: 79px;
+      height: 63px;
+      background-image: url("../img/quotes.png");
+      background-repeat: no-repeat;
+    }
+  }
+
+  .feedback__desktop-hidden {
+    display: none;
+  }
+
+  #feedback__radio-1:checked ~ .feedback__slides .feedback__slide:nth-child(1) {
+    transform: translate(0);
+  }
+
+  #feedback__radio-2:checked ~ .feedback__slides .feedback__slide:nth-child(2) {
+    transform: translateX(-940px);
+  }
+
+  #feedback__radio-3:checked ~ .feedback__slides .feedback__slide:nth-child(3) {
+    transform: translateX(-1880px);
+  }
+
+  .feedback__control-arrow {
+    display: block;
+    position: absolute;
+    top: 209px;
+    left: 470px;
+  }
+
+  .feedback__control-arrow .feedback__label-arrow {
+    display: none;
+  }
+
+  #feedback__radio-1:checked ~ .feedback__control-arrow .feedback__label-arrow:nth-child(2),
+  #feedback__radio-2:checked ~ .feedback__control-arrow .feedback__label-arrow:nth-child(3),
+  #feedback__radio-3:checked ~ .feedback__control-arrow .feedback__label-arrow:nth-child(1) {
+  display: block;
+  width: 30px;
+  height: 50px;
+  position: absolute;
+  top: 0px;
+  left: 452px;
+  cursor: pointer;
+  background-image: url("../img/arrows/right-arrow-normal.png");
+  background-repeat: no-repeat;
+  background-position: 6px 4px;
+
+  &:hover {
+    background-image: url("../img/arrows/right-arrow-hover.png");
+  }
+
+  &:active {
+    background-image: url("../img/arrows/right-arrow-active.png");
+  }
+}
+
+  #feedback__radio-1:checked ~ .feedback__control-arrow .feedback__label-arrow:nth-child(3),
+  #feedback__radio-2:checked ~ .feedback__control-arrow .feedback__label-arrow:nth-child(1),
+  #feedback__radio-3:checked ~ .feedback__control-arrow .feedback__label-arrow:nth-child(2) {
+    display: block;
+    width: 30px;
+    height: 50px;
+    background-color: transparent;
+    position: absolute;
+    top: 0px;
+    left: -463px;
+    cursor: pointer;
+    background-image: url("../img/arrows/left-arrow-normal.png");
+    background-repeat: no-repeat;
+    background-position: 3px 2px;
+
+    &:hover {
+      background-image: url("../img/arrows/left-arrow-hover.png");
+    }
+
+    &:active {
+      background-image: url("../img/arrows/left-arrow-active.png");
+    }
+  }
 }
