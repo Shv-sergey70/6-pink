@@ -62,7 +62,6 @@
   color: #283645;
   .font(@fontRegular, normal, normal);
   margin: 0;
-  background-color: blue;
 }
 
 .price__caption-title--hit {
@@ -131,7 +130,7 @@
 
 //Убираем первую колонку таблицы в мобильной версии
 .price__caption--hidden,
-.price__content-hidden {
+.price__content--hidden {
   display: none;
 }
 
@@ -201,4 +200,233 @@
 #table__radio-3:checked ~ .table__control label[for="table__radio-3"] {
   border: 3px solid #283645;
   background-color: #ffffff;
+}
+
+@media (min-width: @tablet-width) {
+  .price {
+    background-color: #f2f2f2;
+    background-image: url("../img/bg-line.svg");
+    background-repeat: no-repeat;
+    margin-top: -40px;
+  }
+
+  .price__wrapper {
+    width: 620px;
+    padding-left: 20px;
+    padding-right: 20px;
+    overflow: visible;
+    padding-top: 135px;
+    padding-bottom: 66px;
+    margin: 0 auto;
+  }
+
+  .price__table {
+    width: 620px;
+    border-collapse: collapse;
+    transform: translateX(0px);
+  }
+
+  .price__caption-title {
+    font-size: 16px;
+    margin-top: 12px;
+  }
+
+  .price__caption-cost {
+    font-size: 18px;
+    margin-top: -2px;
+    margin-bottom: 10px;
+  }
+
+  .price__caption,
+  .price__content {
+    border: 2px solid #e5e5e5;
+    border-top: none;
+  }
+
+  .price__caption {
+    background-color: #283645;
+    border-bottom: none;
+  }
+
+  .price__left-title {
+    font-size: 14px;
+    line-height: 30px;
+    color: #283645;
+    .font(@fontRegular, normal, normal);
+    margin: 0;
+    margin-left: 15px;
+    margin-top: -4px;
+    text-align: left;
+  }
+
+  .price__caption-title--hit {
+    position: relative;
+
+    &::before {
+      width: 61px;
+      height: 61px;
+      left: 0;
+      background-image: url("../img/tablet-table-hit.png");
+    }
+  }
+
+  .price__content {
+   position: relative;
+   height: 45px;
+  }
+
+  .price__tbody .price__table-row:nth-child(2) .price__content:not(:first-child) {
+    &::before {
+      display:none;
+    }
+  }
+
+  .price__tbody .price__table-row:nth-child(3) .price__content:not(:first-child) {
+    &::before {
+      display:none;
+    }
+  }
+
+  .price__tbody .price__table-row:nth-child(4) .price__content:not(:first-child) {
+    &::before {
+      display:none;
+    }
+  }
+
+  .price__true {
+    position: absolute;
+    right: 60px;
+    top: 12px;
+    background-image: url("../img/table-yes.png");
+  }
+
+  .price__false {
+    position: absolute;
+    right: 61px;
+    top: 9px;
+    background-image: url("../img/table-no.png");
+  }
+
+  //Убираем первую колонку таблицы в мобильной версии
+  .price__caption--hidden,
+  .price__content--hidden {
+    display: table-cell;
+  }
+
+  //Убираем первую ячейку на планшете и десктопе
+  .price__caption--hidden{
+    background-color: #f2f2f2;
+    border: none;
+    border-bottom: 2px solid #e5e5e5;
+  }
+
+  //Задаем ширины колонок
+  .price__table-row td {
+    &:nth-child(1) {
+      width: 155px;
+    }
+    &:nth-child(2) {
+      width: 155px;
+    }
+    &:nth-child(3) {
+      width: 155px;
+    }
+    &:nth-child(4) {
+      width: 155px;
+    }
+  }
+
+  //Слайдер мобильной версии таблицы:
+  #table__radio-1,
+  #table__radio-2,
+  #table__radio-3 {
+    display: none;
+  }
+
+  .table__control {
+    display: none;
+  }
+
+  #table__radio-2:checked ~ .price__wrapper .price__table {
+    transform: translateX(0px);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .price {
+    background-color: #f2f2f2;
+    background-image: url("../img/bg-line.svg");
+    background-repeat: no-repeat;
+    margin-top: -40px;
+  }
+
+  .price__wrapper {
+    width: 940px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 170px;
+    padding-bottom: 98px;
+  }
+
+  .price__table {
+    width: 940px;
+  }
+
+  .price__caption-title {
+    font-size: 18px;
+    margin-top: 14px;
+  }
+
+  .price__caption-cost {
+    font-size: 24px;
+    margin-top: 2px;
+    margin-bottom: 20px;
+  }
+
+  .price__caption,
+  .price__content {
+    border: 2px solid #e5e5e5;
+    border-top: none;
+  }
+
+  .price__caption {
+    background-color: #283645;
+    border-bottom: none;
+  }
+
+  .price__left-title {
+    font-size: 18px;
+    margin-left: 21px;
+    margin-top: -1px;
+    text-align: left;
+  }
+
+  .price__caption-title--hit {
+    position: relative;
+
+    &::before {
+      width: 74px;
+      height: 73px;
+      background-image: url("../img/desktop-table-hit.png");
+    }
+  }
+
+  .price__content {
+   position: relative;
+   height: 59px;
+  }
+
+  .price__true {
+    position: absolute;
+    right: 100px;
+    top: 22px;
+    background-image: url("../img/table-yes.png");
+  }
+
+  .price__false {
+    position: absolute;
+    right: 102px;
+    top: 17px;
+    background-image: url("../img/table-no.png");
+  }
 }
