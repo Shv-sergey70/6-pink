@@ -1,0 +1,14 @@
+.panorama {
+  background-color: #ffffff;
+}
+.panorama__wrapper {
+  width: 640px;
+  height: 137px;
+  margin: 0 auto;
+}
+.panorama__img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+/*# sourceMappingURL=panorama.css.map */

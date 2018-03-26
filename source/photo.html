@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Пинк</title>
+    <link rel="stylesheet" href="css/style.css"> <!-- Подключаем CSS -->
+    <!-- Pixel Glass -->
+<style>
+  HTML {
+    background-repeat: no-repeat;
+    background-position:  50% 0;
+    /* По умолчанию мобильный макет */
+    background-image: url( "img/Makets/photo-mobile-closed.png" );
+    zoom: 100%;
+  }
+  /* Планшет */
+  @media (min-width: 660px) {
+    HTML {
+      /* Планшетный макет */
+      background-image: url( "img/Makets/photo-tablet-closed.png" );
+    }
+  }
+  /* Десктоп */
+  @media (min-width: 1200px) {
+    HTML {
+      /* Десктопный макет */
+      background-image: url( "img/Makets/photo-desktop.png" );
+    }
+  }
+
+  BODY {
+    opacity: .5;
+  }
+</style>
+<link rel="stylesheet" href="../node_modules/pixel-glass/styles.css">
+<script src="../node_modules/pixel-glass/script.js"></script>
+<!-- // Pixel Glass -->
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="page-header__wrapper">
+        <nav class="main-nav main-nav--closed main-nav--nojs">
+          <div class="main-nav__wrapper">
+            <button class="main-nav__toggle" type="button">
+              <span class="visually-hidden">Открыть меню</span>
+            </button>
+            <div class="main-nav__content">
+              <div class="main-nav__logo-wrapper">
+                <a class="main-nav__logo"></a>
+              </div>
+              <div class="main-nav__menu-wrapper">
+                <ul class="main-nav__list">
+                  <li class="main-nav__item"><a class="main-nav__link" href="index.html">Главная</a></li>
+                  <li class="main-nav__item"><a class="main-nav__link main-nav--active">Фотографии</a></li>
+                  <li class="main-nav__item"><a class="main-nav__link" href="#">Конкурс</a></li>
+                  <li class="main-nav__item"><a class="main-nav__link" href="#">HTML Academy</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <section class="photo-header">
+          <h1 class="photo-header__title">Фотографии<br>пользователей<h1>
+        </section>
+      </div>
+    </header>
+    <main>
+      <section class="photo-subtitle">
+        <p class="photo-subtitle__description">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
+      </section>
+      <section class="panorama">
+        <div class="panorama__wrapper">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/photo/panorama-desktop.jpg 1x, img/photo/panorama-desktop@2x.jpg 2x">
+            <source media="(min-width: 660px)" srcset="img/photo/panorama-tablet.jpg 1x, img/photo/panorama-tablet@2x.jpg 2x">
+            <img class="panorama__img" src="img/photo/panorama-mobile.jpg" srcset="img/photo/panorama-mobile@2x.jpg 2x">
+          </picture>
+          <a class="panorama__link" href="" id="suda">Панорама дня</a>
+        </div>
+          <section>
+          </section>
+        </div>
+      </section>
+
+    </main>
+      <footer class="page-footer">
+        <section class="page-footer__wrapper">
+          <section class="page-footer__logo-wrapper">
+            <a class="page-footer__logo">Логотип - PINK</a>
+          </section>
+          <section class="page-footer__socials">
+            <a class="page-footer__twitter" href="#">Твиттер</a>
+            <a class="page-footer__fb" href="#">Фейсбук</a>
+            <a class="page-footer__youtube" href="#">Ютуб</a>
+          </section>
+          <section class="page-footer__copyright">
+            <a class="page-footer__copyright-content" href="https://vk.com/shv.sergey">Разработано<br>Шершнев Сергей</a>
+          </section>
+        </section>
+      </footer>
+    </body>
+
+
+    <script>
+    var mainNavToggle = document.querySelector(".main-nav__toggle");
+    var mainNav = document.querySelector(".main-nav");
+
+    mainNav.classList.remove("main-nav--nojs");
+
+    mainNavToggle.addEventListener("click", function() {
+      if (mainNav.classList.contains("main-nav--closed")) {
+        mainNav.classList.remove("main-nav--closed");
+        mainNav.classList.add("main-nav--opened");
+      }
+      else {
+        mainNav.classList.add("main-nav--closed");
+        mainNav.classList.remove("main-nav--opened");
+      }
+    });
+    </script>
+  </html>
