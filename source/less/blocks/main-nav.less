@@ -104,13 +104,35 @@
 .main-nav__logo {
   display: block;
   position: relative;
-  top: 16px;
-  left: 17px;
-  background-image: url("../img/logotype-white-mobile.png");
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
+  top: 22px;
+  left: 20px;
   width: 80px;
   height: 35px;
+}
+
+.main-nav__logo--not-main {
+  cursor:pointer;
+}
+
+.main-nav__logo-mobile {
+  display: inline;
+  fill: #ffffff;
+}
+
+.main-nav__logo-tablet {
+  display: none;
+}
+
+.main-nav__logo-desktop {
+  display: none;
+}
+
+.main-nav__logo--not-main:hover .main-nav__logo-mobile {
+  fill: #d22856;
+}
+
+.main-nav__logo--not-main:active .main-nav__logo-mobile {
+  fill: rgba(255, 255, 255, 0.3);
 }
 
 .main-nav__menu-wrapper {
@@ -198,12 +220,32 @@
 
   .main-nav__logo {
     display: block;
-    top: 20px;
-    left: 18px;
-    background-image: url("../img/logotype-white-tablet.png");
-    background-position: 2px 7px;
-    width: 150px;
-    height: 50px;
+    position: relative;
+    top: 25px;
+    left: 20px;
+    width: 147px;
+    height: 41px;
+  }
+
+  .main-nav__logo-mobile {
+    display: none;
+  }
+
+  .main-nav__logo-tablet {
+    display: inline;
+    fill: #ffffff;
+  }
+
+  .main-nav__logo-desktop {
+    display: none;
+  }
+
+  .main-nav__logo--not-main:hover .main-nav__logo-tablet {
+    fill: #d22856;
+  }
+
+  .main-nav__logo--not-main:active .main-nav__logo-tablet {
+    fill: rgba(255, 255, 255, 0.3);
   }
 
   .main-nav--closed .main-nav__logo-wrapper {
@@ -273,12 +315,32 @@
 
   .main-nav__logo {
     display: block;
-    top: 20px;
+    position: relative;
+    top: 27px;
     left: 0px;
-    background-image: url("../img/logotype-white-desktop.png");
-    background-position: 0px 7px;
-    width: 150px;
-    height: 50px;
+    width: 147px;
+    height: 41px;
+  }
+
+  .main-nav__logo-mobile {
+    display: none;
+  }
+
+  .main-nav__logo-tablet {
+    display: none;
+  }
+
+  .main-nav__logo-desktop {
+    display: inline;
+    fill: #ffffff;
+  }
+
+  .main-nav__logo--not-main:hover .main-nav__logo-desktop {
+    fill: #d22856;
+  }
+
+  .main-nav__logo--not-main:active .main-nav__logo-desktop {
+    fill: rgba(255, 255, 255, 0.3);
   }
 
   .main-nav__menu-wrapper {
