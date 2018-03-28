@@ -2370,7 +2370,14 @@ body {
     background-image: url("../img/logotype-footer-tablet.png");
     background-repeat: no-repeat;
     margin-left: 0px;
-    margin-top: -12px;
+    margin-top: -17px;
+  }
+  .page-footer__logo-tablet {
+    width: 146.3px;
+    height: 40.375px;
+  }
+  .page-footer__logo-desktop {
+    display: none;
   }
   .page-footer__socials {
     display: flex;
@@ -2407,6 +2414,9 @@ body {
   .page-footer__twitter-svg:active {
     fill: rgba(210, 40, 86, 0.3);
   }
+  .page-footer__twitter:active .page-footer__twitter-svg {
+    fill: rgba(210, 40, 86, 0.3);
+  }
   .page-footer__fb {
     position: relative;
     display: block;
@@ -2434,6 +2444,9 @@ body {
   .page-footer__facebook-svg:active {
     fill: rgba(210, 40, 86, 0.3);
   }
+  .page-footer__fb:active .page-footer__facebook-svg {
+    fill: rgba(210, 40, 86, 0.3);
+  }
   .page-footer__youtube {
     position: relative;
     display: block;
@@ -2441,12 +2454,16 @@ body {
     height: 44px;
     border: 3px solid rgba(40, 54, 69, 0.3);
     border-radius: 50%;
+    cursor: pointer;
   }
   .page-footer__youtube:hover {
     border-color: #283645;
   }
   .page-footer__youtube:active {
     border-color: rgba(40, 54, 69, 0.3);
+  }
+  .page-footer__youtube:active .page-footer__youtube-svg {
+    fill: rgba(210, 40, 86, 0.3);
   }
   .page-footer__youtube-svg {
     position: absolute;
@@ -2457,9 +2474,6 @@ body {
     width: 14.64px;
     height: 13.96px;
     transform: translate(-50%, -50%);
-  }
-  .page-footer__youtube-svg:active {
-    fill: rgba(210, 40, 86, 0.3);
   }
   .page-footer__copyright {
     margin-left: auto;
@@ -2507,6 +2521,14 @@ body {
   }
   .page-footer__copyright-content {
     font-size: 18px;
+  }
+  .page-footer__logo-tablet {
+    display: none;
+  }
+  .page-footer__logo-desktop {
+    display: inline;
+    width: 146.3px;
+    height: 40.375px;
   }
 }
 .photo-header__title {
@@ -2670,3 +2692,4 @@ body {
     background-color: #d22856;
   }
 }
+/*# sourceMappingURL=style.css.map */
