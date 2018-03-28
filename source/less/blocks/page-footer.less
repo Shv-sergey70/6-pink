@@ -21,8 +21,6 @@
     font-size: 0;
     width: 147px;
     height: 40px;
-    background-image: url("../img/logotype-footer-tablet.png");
-    background-repeat: no-repeat;
     margin-left: 0px;
     margin-top: -17px;
   }
@@ -30,6 +28,16 @@
   .page-footer__logo-tablet {
     width: 146.3px;
     height: 40.375px;
+    fill: #283645;
+  }
+
+  .page-footer__logo--not-main:hover .page-footer__logo-tablet {
+    fill: #d22856;
+  }
+
+  .page-footer__logo--not-main:active .page-footer__logo-tablet {
+    fill: #283645;
+    opacity: 0.3;
   }
 
   .page-footer__logo-desktop {
@@ -185,7 +193,6 @@
   }
 
   .page-footer__logo-wrapper {
-    background-image: url("../img/logotype-footer-desktop.png");
     margin-top: -18px;
   }
 
@@ -210,5 +217,20 @@
     display: inline;
     width: 146.3px;
     height: 40.375px;
+    fill: #283645;
+  }
+
+  .page-footer__logo-tablet {
+    width: 146.3px;
+    height: 40.375px;
+  }
+
+  .page-footer__logo--not-main:hover .page-footer__logo-desktop {
+    fill: #d22856;
+  }
+
+  .page-footer__logo--not-main:active .page-footer__logo-desktop {
+    fill: #283645;
+    opacity: 0.3;
   }
 }
