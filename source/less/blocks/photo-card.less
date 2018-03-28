@@ -1,0 +1,74 @@
+.photo-card {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+}
+
+.photo-card__wrapper {
+  background-color: #f2f2f2;
+  padding: 18px 18px 20px;
+}
+
+.photo-card__name {
+  font-size: 14px;
+  line-height: 24px;
+  .font(@fontBold, bold);
+  color: #283645;
+}
+
+.photo-card__time {
+  font-size: 12px;
+  line-height: 24px;
+  .font(@fontLight, light);
+  color: #283645;
+  text-transform: uppercase;
+}
+
+.photo-card__content {
+  display: block;
+  margin: 0;
+  font-size: 14px;
+  line-height: 24px;
+  .font(@fontRegular, normal, normal);
+  color: #283645;
+  margin-bottom: 10px;
+}
+
+.photo-card__footer {
+  position: relative;
+  display: flex;
+}
+
+.photo-card__like {
+  display: block;
+  padding-left: 32px;
+  font-size: 12px;
+  line-height: 24px;
+  .font(@fontRegular, normal, normal);
+  color: #d22856;
+  text-transform: uppercase;
+}
+
+.photo-card__like-link {
+  position: absolute;
+  top: 5px;
+  left: 0px;
+  font-size: 0;
+  width: 12.545px;
+  height: 11.99px;
+}
+
+.photo-card__like-icon {
+  width: 12.545px;
+  height: 11.99px;
+  fill: #d22856;
+}
+
+@media (min-width: @tablet-width) {
+}
+
+@media (min-width: @desktop-width) {
+}

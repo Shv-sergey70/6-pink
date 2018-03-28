@@ -34,6 +34,75 @@
   text-decoration: none;
 }
 
+.panorama__card {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+}
+
+.panorama__card-wrapper {
+  background-color: #f2f2f2;
+  padding: 18px 18px 20px;
+}
+
+.panorama__name {
+  font-size: 14px;
+  line-height: 24px;
+  .font(@fontBold, bold);
+  color: #283645;
+}
+
+.panorama__time {
+  font-size: 12px;
+  line-height: 24px;
+  .font(@fontLight, light);
+  color: #283645;
+  text-transform: uppercase;
+}
+
+.panorama__content {
+  display: block;
+  margin: 0;
+  font-size: 14px;
+  line-height: 24px;
+  .font(@fontRegular, normal, normal);
+  color: #283645;
+  margin-bottom: 10px;
+}
+
+.panorama__footer {
+  position: relative;
+  display: flex;
+}
+
+.panorama__like-link {
+  position: absolute;
+  top: 5px;
+  left: 0px;
+  font-size: 0;
+  width: 12.545px;
+  height: 11.99px;
+}
+
+.panorama__like-icon {
+  width: 12.545px;
+  height: 11.99px;
+  fill: #d22856;
+}
+
+.panorama__like {
+  display: block;
+  padding-left: 32px;
+  font-size: 12px;
+  line-height: 24px;
+  .font(@fontRegular, normal, normal);
+  color: #d22856;
+  text-transform: uppercase;
+}
+
 @media (min-width: @tablet-width) {
   .panorama__wrapper {
     position: relative;
@@ -65,20 +134,54 @@
     text-transform: uppercase;
     background-color: #d22856;
   }
+
+  .panorama__card {
+    position: relative;
+    width: 620px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto;
+  }
+
+  .panorama__card-wrapper {
+    background-color: #f2f2f2;
+    padding: 24px 28px 14px;
+  }
+
+  .panorama__footer {
+    position: absolute;
+    top: 25px;
+    right: 79px;
+  }
+
+  .panorama__like-link {
+    top: 4px;
+    left: 107px;
+  }
+
+  .panorama__like {
+    display: block;
+    padding-left: 0px;
+    font-size: 12px;
+    line-height: 24px;
+    .font(@fontRegular, normal, normal);
+    color: #d22856;
+    text-transform: uppercase;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .panorama__wrapper {
     position: relative;
     width: 1200px;
-    height: 507px;
+    height: 506.5px;
     margin: 0 auto;
   }
 
   .panorama__img {
     display: block;
     width: 100%;
-    height: 507px;
+    height: 506.5px;
   }
 
   .panorama__link {
@@ -97,5 +200,39 @@
     color: #ffffff;
     text-transform: uppercase;
     background-color: #d22856;
+  }
+
+  .panorama__card {
+    position: relative;
+    width: 940px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0 auto;
+  }
+
+  .panorama__card-wrapper {
+    background-color: #f2f2f2;
+    padding: 25px 28px 14px;
+  }
+
+  .panorama__footer {
+    position: absolute;
+    top: 25px;
+    right: 72px;
+  }
+
+  .panorama__like-link {
+    top: 5px;
+    left: 107px;
+  }
+
+  .panorama__like {
+    display: block;
+    padding-left: 0px;
+    font-size: 12px;
+    line-height: 24px;
+    .font(@fontRegular, normal, normal);
+    color: #d22856;
+    text-transform: uppercase;
   }
 }
