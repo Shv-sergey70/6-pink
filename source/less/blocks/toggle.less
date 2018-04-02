@@ -178,3 +178,409 @@
   fill: #d22856;
   opacity: 1;
 }
+
+@media (min-width: @tablet-width) {
+  .toggle {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 50px;
+    margin-bottom: 38px;
+    font-size: 0;
+    padding-left: 27px;
+  }
+
+  .toggle::after {
+    display: none;
+  }
+
+  #filter-toggle-1,
+  #filter-toggle-2,
+  #filter-toggle-3 {
+    display: none;
+  }
+
+  .toggle__svg-crop {
+    width: 24px;
+    height: 24px;
+    fill: #d22856;
+    opacity: 1;
+    padding-top: 8px;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:active {
+      fill: #d22856;
+      opacity: 1;
+    }
+  }
+
+  .toggle__wrapper-crop {
+    margin-left: 0px;
+  }
+
+  .toggle__crop-line {
+    display: block;
+    position: absolute;
+    width: 202px;
+    height: 2px;
+    background-color: #283645;
+    top: 19px;
+    left: 80px;
+  }
+
+  .toggle__crop-dot {
+    position: absolute;
+    left: 146px;
+    top: -6px;
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 2px solid #d22856;
+    cursor: pointer;
+
+    &:active {
+      background-color: #d22856;
+      transition: 0.3s;
+    }
+  }
+
+  .toggle__svg-fill {
+    width: 24px;
+    height: 24px;
+    fill: #d22856;
+    opacity: 1;
+    padding-top: 50px;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:active {
+      fill: #d22856;
+      opacity: 1;
+    }
+  }
+
+  .toggle__wrapper-fill {
+    margin-left: 0px;
+  }
+
+  .toggle__fill-line {
+    display: block;
+    position: absolute;
+    width: 202px;
+    height: 2px;
+    background-color: #283645;
+    top: 92px;
+    left: 80px;
+  }
+
+  .toggle__fill-dot {
+    position: absolute;
+    left: 25px;
+    top: -6px;
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 2px solid #d22856;
+    cursor: pointer;
+
+    &:active {
+      background-color: #d22856;
+      transition: 0.3s;
+    }
+  }
+
+  .toggle__svg-contrast {
+    width: 16px;
+    height: 16px;
+    fill: #d22856;
+    opacity: 1;
+    padding-top: 49px;
+    padding-left: 6px;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:active {
+      fill: #d22856;
+      opacity: 1;
+    }
+  }
+
+  .toggle__wrapper-contrast {
+    margin-left: 0px;
+  }
+
+  .toggle__contrast-line {
+    display: block;
+    position: absolute;
+    width: 202px;
+    height: 2px;
+    background-color: #283645;
+    top: 162px;
+    left: 80px;
+  }
+
+  .toggle__contrast-dot {
+    position: absolute;
+    left: 96px;
+    top: -6px;
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 2px solid #d22856;
+    cursor: pointer;
+
+    &:active {
+      background-color: #d22856;
+      transition: 0.3s;
+    }
+  }
+
+  label[for="filter-toggle-1"]::after,
+  label[for="filter-toggle-2"]::after,
+  label[for="filter-toggle-3"]::after {
+    content: "";
+    position: absolute;
+    top: 55px;
+    display: block;
+    width: 275px;
+    height: 1px;
+    background-color: #dddfe0;
+  }
+
+  label[for="filter-toggle-2"]::after {
+    top: 128px;
+  }
+
+  label[for="filter-toggle-3"]::after {
+    top: 198px;
+  }
+
+  //отображение линии и точки при выделеленном инструменте
+  #filter-toggle-1:checked ~ label[for="filter-toggle-1"] .toggle__crop-line,
+  #filter-toggle-2:checked ~ label[for="filter-toggle-2"] .toggle__fill-line,
+  #filter-toggle-3:checked ~ label[for="filter-toggle-3"] .toggle__contrast-line {
+    display: block;
+  }
+
+  //Заливка при выделенном инструменте
+  #filter-toggle-1:checked ~ label[for="filter-toggle-1"] .toggle__svg-crop,
+  #filter-toggle-2:checked ~ label[for="filter-toggle-2"] .toggle__svg-fill,
+  #filter-toggle-3:checked ~ label[for="filter-toggle-3"] .toggle__svg-contrast {
+    fill: #d22856;
+    opacity: 1;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .toggle {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 50px;
+    margin-bottom: 38px;
+    font-size: 0;
+    padding-left: 0px;
+  }
+
+  .toggle::after {
+    display: none;
+  }
+
+  #filter-toggle-1,
+  #filter-toggle-2,
+  #filter-toggle-3 {
+    display: none;
+  }
+
+  .toggle__svg-crop {
+    width: 44px;
+    height: 44px;
+    fill: #d22856;
+    opacity: 1;
+    padding-top: 0px;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:active {
+      fill: #d22856;
+      opacity: 1;
+    }
+  }
+
+  .toggle__wrapper-crop {
+    margin-left: 0px;
+  }
+
+  .toggle__crop-line {
+    display: block;
+    position: absolute;
+    width: 288px;
+    height: 2px;
+    background-color: #283645;
+    top: 19px;
+    left: 91px;
+  }
+
+  .toggle__crop-dot {
+    position: absolute;
+    left: 72px;
+    top: -6px;
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 2px solid #d22856;
+    cursor: pointer;
+
+    &:active {
+      background-color: #d22856;
+      transition: 0.3s;
+    }
+  }
+
+  .toggle__svg-fill {
+    width: 48px;
+    height: 43px;
+    fill: #d22856;
+    opacity: 1;
+    padding-top: 30px;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:active {
+      fill: #d22856;
+      opacity: 1;
+    }
+  }
+
+  .toggle__wrapper-fill {
+    margin-left: 0px;
+  }
+
+  .toggle__fill-line {
+    display: block;
+    position: absolute;
+    width: 288px;
+    height: 2px;
+    background-color: #283645;
+    top: 92px;
+    left: 91px;
+  }
+
+  .toggle__fill-dot {
+    position: absolute;
+    left: 248px;
+    top: -6px;
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 2px solid #d22856;
+    cursor: pointer;
+
+    &:active {
+      background-color: #d22856;
+      transition: 0.3s;
+    }
+  }
+
+  .toggle__svg-contrast {
+    width: 32px;
+    height: 32px;
+    fill: #d22856;
+    opacity: 1;
+    padding-top: 30px;
+    padding-left: 6px;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:active {
+      fill: #d22856;
+      opacity: 1;
+    }
+  }
+
+  .toggle__wrapper-contrast {
+    margin-left: 0px;
+  }
+
+  .toggle__contrast-line {
+    display: block;
+    position: absolute;
+    width: 288px;
+    height: 2px;
+    background-color: #283645;
+    top: 162px;
+    left: 91px;
+  }
+
+  .toggle__contrast-dot {
+    position: absolute;
+    left: 160px;
+    top: -6px;
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 2px solid #d22856;
+    cursor: pointer;
+
+    &:active {
+      background-color: #d22856;
+      transition: 0.3s;
+    }
+  }
+
+  label[for="filter-toggle-1"]::after,
+  label[for="filter-toggle-2"]::after,
+  label[for="filter-toggle-3"]::after {
+    content: "";
+    position: absolute;
+    top: 55px;
+    display: block;
+    width: 410px;
+    height: 1px;
+    background-color: #dddfe0;
+  }
+
+  label[for="filter-toggle-2"]::after {
+    top: 128px;
+  }
+
+  label[for="filter-toggle-3"]::after {
+    top: 198px;
+  }
+
+  //отображение линии и точки при выделеленном инструменте
+  #filter-toggle-1:checked ~ label[for="filter-toggle-1"] .toggle__crop-line,
+  #filter-toggle-2:checked ~ label[for="filter-toggle-2"] .toggle__fill-line,
+  #filter-toggle-3:checked ~ label[for="filter-toggle-3"] .toggle__contrast-line {
+    display: block;
+  }
+
+  //Заливка при выделенном инструменте
+  #filter-toggle-1:checked ~ label[for="filter-toggle-1"] .toggle__svg-crop,
+  #filter-toggle-2:checked ~ label[for="filter-toggle-2"] .toggle__svg-fill,
+  #filter-toggle-3:checked ~ label[for="filter-toggle-3"] .toggle__svg-contrast {
+    fill: #d22856;
+    opacity: 1;
+  }
+}

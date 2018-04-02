@@ -2484,6 +2484,7 @@ body {
   margin-right: 95px;
   margin-top: 45px;
   text-align: center;
+  padding-bottom: 40px;
 }
 .page-footer__copyright-content {
   font-size: 14px;
@@ -2645,6 +2646,7 @@ body {
     margin-right: 25px;
     margin-top: 6px;
     text-align: center;
+    padding-bottom: 0px;
   }
   .page-footer__copyright-content {
     font-size: 14px;
@@ -2667,6 +2669,9 @@ body {
   }
 }
 @media (min-width: 1200px) {
+  .page-footer--photo {
+    margin-top: 29px;
+  }
   .page-footer__wrapper {
     width: 940px;
     padding-left: 10px;
@@ -3422,8 +3427,174 @@ body {
     font-style: normal;
     text-align: center;
     margin: 0 auto;
-    margin-bottom: 43px;
-    margin-top: 28px;
+    margin-bottom: 68px;
+    margin-top: 48px;
+  }
+  .filter__grey-bg {
+    background-color: #f2f2f2;
+    padding-top: 57px;
+  }
+  .filter__main-wrapper {
+    width: 620px;
+    padding-left: 20px;
+    padding-right: 20px;
+    min-height: 200px;
+    margin: 0 auto;
+  }
+  .filter__picture {
+    width: 300px;
+    height: 400px;
+    margin-bottom: 40px;
+  }
+  .filter__settings {
+    width: 300px;
+  }
+  .filter__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  .filter__btns {
+    margin-bottom: 57px;
+    padding-left: 26px;
+  }
+  .filter__post,
+  .filter__cancel {
+    width: 260px;
+    border-width: 3px;
+    border-style: solid;
+    background-color: transparent;
+    font-size: 18px;
+    line-height: 18px;
+    font-family: 'opensansbold';
+    src: url('../fonts/opensansbold.woff') format('woff'), url('../fonts/opensansbold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    border-radius: 50px;
+    padding-top: 14px;
+    padding-bottom: 16px;
+    margin-top: 8px;
+  }
+  .filter__post {
+    color: #d22856;
+    border-color: #d22856;
+  }
+  .filter__post:hover {
+    color: #ffffff;
+    background-color: #d22856;
+  }
+  .filter__post:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #d22856;
+  }
+  .filter__cancel {
+    margin-top: 23px;
+    color: #283645;
+    border-color: #283645;
+    opacity: 0.1;
+  }
+  .filter__cancel:hover {
+    opacity: 0.3;
+  }
+  .filter__cancel:active {
+    opacity: 0.3;
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #283645;
+  }
+}
+@media (min-width: 1200px) {
+  .filter__white-bg {
+    background-color: #ffffff;
+  }
+  .filter__offer {
+    display: block;
+    width: 940px;
+    color: #283645;
+    font-size: 18px;
+    line-height: 30px;
+    font-family: 'OpenSans';
+    src: url('../fonts/OpenSans.woff') format('woff'), url('../fonts/OpenSans.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 65px;
+    margin-top: 5px;
+  }
+  .filter__grey-bg {
+    background-color: #f2f2f2;
+    padding-top: 57px;
+  }
+  .filter__main-wrapper {
+    width: 940px;
+    padding-left: 20px;
+    padding-right: 20px;
+    min-height: 200px;
+    margin: 0 auto;
+  }
+  .filter__picture {
+    width: 300px;
+    height: 400px;
+    margin-bottom: 40px;
+  }
+  .filter__settings {
+    width: 410px;
+  }
+  .filter__wrapper {
+    padding-left: 80px;
+    padding-right: 60px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  .filter__btns {
+    margin-bottom: 59px;
+    padding-left: 0px;
+    margin-top: 92px;
+  }
+  .filter__post,
+  .filter__cancel {
+    width: 181px;
+    border-width: 3px;
+    border-style: solid;
+    background-color: transparent;
+    font-size: 18px;
+    line-height: 18px;
+    font-family: 'opensansbold';
+    src: url('../fonts/opensansbold.woff') format('woff'), url('../fonts/opensansbold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    border-radius: 50px;
+    padding-top: 15px;
+    padding-bottom: 16px;
+    margin-top: 8px;
+  }
+  .filter__post {
+    color: #d22856;
+    border-color: #d22856;
+  }
+  .filter__post:hover {
+    color: #ffffff;
+    background-color: #d22856;
+  }
+  .filter__post:active {
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #d22856;
+  }
+  .filter__cancel {
+    margin-top: 23px;
+    color: #283645;
+    border-color: #283645;
+    opacity: 0.1;
+    margin-left: 42px;
+  }
+  .filter__cancel:hover {
+    opacity: 0.3;
+  }
+  .filter__cancel:active {
+    opacity: 0.3;
+    color: rgba(255, 255, 255, 0.3);
+    background-color: #283645;
   }
 }
 .toggle {
@@ -3578,5 +3749,349 @@ body {
 #filter-toggle-3:checked ~ label[for="filter-toggle-3"] .toggle__svg-contrast {
   fill: #d22856;
   opacity: 1;
+}
+@media (min-width: 660px) {
+  .toggle {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 50px;
+    margin-bottom: 38px;
+    font-size: 0;
+    padding-left: 27px;
+  }
+  .toggle::after {
+    display: none;
+  }
+  #filter-toggle-1,
+  #filter-toggle-2,
+  #filter-toggle-3 {
+    display: none;
+  }
+  .toggle__svg-crop {
+    width: 24px;
+    height: 24px;
+    fill: #d22856;
+    opacity: 1;
+    padding-top: 8px;
+  }
+  .toggle__svg-crop:hover {
+    opacity: 1;
+  }
+  .toggle__svg-crop:active {
+    fill: #d22856;
+    opacity: 1;
+  }
+  .toggle__wrapper-crop {
+    margin-left: 0px;
+  }
+  .toggle__crop-line {
+    display: block;
+    position: absolute;
+    width: 202px;
+    height: 2px;
+    background-color: #283645;
+    top: 19px;
+    left: 80px;
+  }
+  .toggle__crop-dot {
+    position: absolute;
+    left: 146px;
+    top: -6px;
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 2px solid #d22856;
+    cursor: pointer;
+  }
+  .toggle__crop-dot:active {
+    background-color: #d22856;
+    transition: 0.3s;
+  }
+  .toggle__svg-fill {
+    width: 24px;
+    height: 24px;
+    fill: #d22856;
+    opacity: 1;
+    padding-top: 50px;
+  }
+  .toggle__svg-fill:hover {
+    opacity: 1;
+  }
+  .toggle__svg-fill:active {
+    fill: #d22856;
+    opacity: 1;
+  }
+  .toggle__wrapper-fill {
+    margin-left: 0px;
+  }
+  .toggle__fill-line {
+    display: block;
+    position: absolute;
+    width: 202px;
+    height: 2px;
+    background-color: #283645;
+    top: 92px;
+    left: 80px;
+  }
+  .toggle__fill-dot {
+    position: absolute;
+    left: 25px;
+    top: -6px;
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 2px solid #d22856;
+    cursor: pointer;
+  }
+  .toggle__fill-dot:active {
+    background-color: #d22856;
+    transition: 0.3s;
+  }
+  .toggle__svg-contrast {
+    width: 16px;
+    height: 16px;
+    fill: #d22856;
+    opacity: 1;
+    padding-top: 49px;
+    padding-left: 6px;
+  }
+  .toggle__svg-contrast:hover {
+    opacity: 1;
+  }
+  .toggle__svg-contrast:active {
+    fill: #d22856;
+    opacity: 1;
+  }
+  .toggle__wrapper-contrast {
+    margin-left: 0px;
+  }
+  .toggle__contrast-line {
+    display: block;
+    position: absolute;
+    width: 202px;
+    height: 2px;
+    background-color: #283645;
+    top: 162px;
+    left: 80px;
+  }
+  .toggle__contrast-dot {
+    position: absolute;
+    left: 96px;
+    top: -6px;
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 2px solid #d22856;
+    cursor: pointer;
+  }
+  .toggle__contrast-dot:active {
+    background-color: #d22856;
+    transition: 0.3s;
+  }
+  label[for="filter-toggle-1"]::after,
+  label[for="filter-toggle-2"]::after,
+  label[for="filter-toggle-3"]::after {
+    content: "";
+    position: absolute;
+    top: 55px;
+    display: block;
+    width: 275px;
+    height: 1px;
+    background-color: #dddfe0;
+  }
+  label[for="filter-toggle-2"]::after {
+    top: 128px;
+  }
+  label[for="filter-toggle-3"]::after {
+    top: 198px;
+  }
+  #filter-toggle-1:checked ~ label[for="filter-toggle-1"] .toggle__crop-line,
+  #filter-toggle-2:checked ~ label[for="filter-toggle-2"] .toggle__fill-line,
+  #filter-toggle-3:checked ~ label[for="filter-toggle-3"] .toggle__contrast-line {
+    display: block;
+  }
+  #filter-toggle-1:checked ~ label[for="filter-toggle-1"] .toggle__svg-crop,
+  #filter-toggle-2:checked ~ label[for="filter-toggle-2"] .toggle__svg-fill,
+  #filter-toggle-3:checked ~ label[for="filter-toggle-3"] .toggle__svg-contrast {
+    fill: #d22856;
+    opacity: 1;
+  }
+}
+@media (min-width: 1200px) {
+  .toggle {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 50px;
+    margin-bottom: 38px;
+    font-size: 0;
+    padding-left: 0px;
+  }
+  .toggle::after {
+    display: none;
+  }
+  #filter-toggle-1,
+  #filter-toggle-2,
+  #filter-toggle-3 {
+    display: none;
+  }
+  .toggle__svg-crop {
+    width: 44px;
+    height: 44px;
+    fill: #d22856;
+    opacity: 1;
+    padding-top: 0px;
+  }
+  .toggle__svg-crop:hover {
+    opacity: 1;
+  }
+  .toggle__svg-crop:active {
+    fill: #d22856;
+    opacity: 1;
+  }
+  .toggle__wrapper-crop {
+    margin-left: 0px;
+  }
+  .toggle__crop-line {
+    display: block;
+    position: absolute;
+    width: 288px;
+    height: 2px;
+    background-color: #283645;
+    top: 19px;
+    left: 91px;
+  }
+  .toggle__crop-dot {
+    position: absolute;
+    left: 72px;
+    top: -6px;
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 2px solid #d22856;
+    cursor: pointer;
+  }
+  .toggle__crop-dot:active {
+    background-color: #d22856;
+    transition: 0.3s;
+  }
+  .toggle__svg-fill {
+    width: 48px;
+    height: 43px;
+    fill: #d22856;
+    opacity: 1;
+    padding-top: 30px;
+  }
+  .toggle__svg-fill:hover {
+    opacity: 1;
+  }
+  .toggle__svg-fill:active {
+    fill: #d22856;
+    opacity: 1;
+  }
+  .toggle__wrapper-fill {
+    margin-left: 0px;
+  }
+  .toggle__fill-line {
+    display: block;
+    position: absolute;
+    width: 288px;
+    height: 2px;
+    background-color: #283645;
+    top: 92px;
+    left: 91px;
+  }
+  .toggle__fill-dot {
+    position: absolute;
+    left: 248px;
+    top: -6px;
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 2px solid #d22856;
+    cursor: pointer;
+  }
+  .toggle__fill-dot:active {
+    background-color: #d22856;
+    transition: 0.3s;
+  }
+  .toggle__svg-contrast {
+    width: 32px;
+    height: 32px;
+    fill: #d22856;
+    opacity: 1;
+    padding-top: 30px;
+    padding-left: 6px;
+  }
+  .toggle__svg-contrast:hover {
+    opacity: 1;
+  }
+  .toggle__svg-contrast:active {
+    fill: #d22856;
+    opacity: 1;
+  }
+  .toggle__wrapper-contrast {
+    margin-left: 0px;
+  }
+  .toggle__contrast-line {
+    display: block;
+    position: absolute;
+    width: 288px;
+    height: 2px;
+    background-color: #283645;
+    top: 162px;
+    left: 91px;
+  }
+  .toggle__contrast-dot {
+    position: absolute;
+    left: 160px;
+    top: -6px;
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 2px solid #d22856;
+    cursor: pointer;
+  }
+  .toggle__contrast-dot:active {
+    background-color: #d22856;
+    transition: 0.3s;
+  }
+  label[for="filter-toggle-1"]::after,
+  label[for="filter-toggle-2"]::after,
+  label[for="filter-toggle-3"]::after {
+    content: "";
+    position: absolute;
+    top: 55px;
+    display: block;
+    width: 410px;
+    height: 1px;
+    background-color: #dddfe0;
+  }
+  label[for="filter-toggle-2"]::after {
+    top: 128px;
+  }
+  label[for="filter-toggle-3"]::after {
+    top: 198px;
+  }
+  #filter-toggle-1:checked ~ label[for="filter-toggle-1"] .toggle__crop-line,
+  #filter-toggle-2:checked ~ label[for="filter-toggle-2"] .toggle__fill-line,
+  #filter-toggle-3:checked ~ label[for="filter-toggle-3"] .toggle__contrast-line {
+    display: block;
+  }
+  #filter-toggle-1:checked ~ label[for="filter-toggle-1"] .toggle__svg-crop,
+  #filter-toggle-2:checked ~ label[for="filter-toggle-2"] .toggle__svg-fill,
+  #filter-toggle-3:checked ~ label[for="filter-toggle-3"] .toggle__svg-contrast {
+    fill: #d22856;
+    opacity: 1;
+  }
 }
 /*# sourceMappingURL=style.css.map */
