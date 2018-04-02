@@ -99,6 +99,112 @@
 
 @media (min-width: @tablet-width) {
   .photo-card {
+    width: 620px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    transform: translateX(0px);
+  }
+
+  .photo-card__card {
+    position: relative;
+    flex-shrink: 0;
+    width: 300px;
+    height: 455px;
+    margin: 0 0;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 19px;
+    background-color: #f2f2f2;
+  }
+
+  .photo-card__picture {
+    display: block;
+    width: 300px;
+    height: 300px;
+  }
+
+  .photo-card__img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .photo-card__main-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin: 0;
+  }
+
+  .photo-card__content {
+    background-color: #f2f2f2;
+    padding: 24px 27px 21.5px;
+  }
+
+  .photo-card__name {
+    font-size: 14px;
+    line-height: 24px;
+    .font(@fontBold, bold);
+    color: #283645;
+  }
+
+  .photo-card__time {
+    font-size: 12px;
+    line-height: 24px;
+    .font(@fontLight, light);
+    color: #283645;
+    text-transform: uppercase;
+  }
+
+  .photo-card__comment {
+    margin: 0;
+    font-size: 14px;
+    line-height: 24px;
+    .font(@fontRegular, normal, normal);
+    color: #283645;
+    padding-bottom: 36.5px;
+  }
+
+  .photo-card__footer {
+    position: absolute;
+    bottom: 0px;
+  }
+
+  .photo-card__like {
+    display: block;
+    width: 100px;
+    position: absolute;
+    bottom: 21px;
+    padding-left: 0px;
+    font-size: 12px;
+    line-height: 24px;
+    .font(@fontRegular, normal, normal);
+    color: #d22856;
+    text-transform: uppercase;
+  }
+
+  .photo-card__like-link {
+    position: absolute;
+    top: -41px;
+    left: 228px;
+    font-size: 0;
+    width: 12.545px;
+    height: 11.99px;
+  }
+
+  .photo-card__like-icon {
+    width: 12.545px;
+    height: 11.99px;
+    fill: #d22856;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .photo-card {
     width: 940px;
     padding-left: 10px;
     padding-right: 10px;
@@ -201,7 +307,4 @@
     height: 11.99px;
     fill: #d22856;
   }
-}
-
-@media (min-width: @desktop-width) {
 }

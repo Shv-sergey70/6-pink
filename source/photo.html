@@ -217,7 +217,7 @@
                 <b class="photo-card__name">Левон</b>
                 <time class="photo-card__time" datetime="08:00">(5 часов назад)</time>
               </header>
-              <p class="photo-card__comment" id="suda">
+              <p class="photo-card__comment">
                 Вчера он на луну летал, сегодня в руки к нам попал.
               </p>
               <footer class="photo-card__footer">
@@ -368,6 +368,68 @@
           </div>
         </section> <!--photo-card__card-->
       </section>
+      <section class="filter">
+        <section class="filter__white-bg">
+          <p class="filter__offer">Затмите их всех!<br>Выкладывайте все, что накопилось в телефоне!</p>
+        </section>
+        <section class="filter__grey-bg">
+          <section class="filter__main-wrapper">
+            <form class="filter__form" action="/echo" method="post">
+              <section class="filter__wrapper">
+                <section class="filter__picture">
+                  <picture>
+                    <source media="(min-width: 1200px)" srcset="img/photo/photo-7-desktop.jpg 1x, img/photo/photo-7-desktop@2x.jpg 2x">
+                    <source media="(min-width: 660px)" srcset="img/photo/photo-7-tablet.jpg 1x, img/photo/photo-7-tablet@2x.jpg 2x">
+                    <img class="filter__image" src="img/photo/photo-7-mobile.jpg" srcset="img/photo/photo-7-mobile@2x.jpg 2x">
+                  </picture>
+                </section>
+                <section class="filter__settings">
+                  <section class="toggle">
+                    <input type="radio" name="filter-toggle" id="filter-toggle-1" checked>
+                    <label for="filter-toggle-1">Crop
+                      <span class="toggle__wrapper-crop">
+                        <svg class="toggle__svg-crop">
+                          <use xlink:href="img/svg-sprite.svg#icon-crop"></use>
+                        </svg>
+                      </span>
+                      <span class="toggle__crop-line">
+                        <span class="toggle__crop-dot"></span>
+                      </span>
+                    </label>
+                    <input type="radio" name="filter-toggle" id="filter-toggle-2">
+                    <label for="filter-toggle-2">Fill
+                      <span class="toggle__wrapper-fill">
+                        <svg class="toggle__svg-fill"  id="suda">
+                          <use xlink:href="img/svg-sprite.svg#icon-fill"></use>
+                        </svg>
+                      </span>
+                      <span class="toggle__fill-line">
+                        <span class="toggle__fill-dot"></span>
+                      </span>
+                    </label>
+                    <input type="radio" name="filter-toggle" id="filter-toggle-3">
+                    <label for="filter-toggle-3">Contrast
+                      <span class="toggle__wrapper-contrast">
+                        <svg class="toggle__svg-contrast">
+                          <use xlink:href="img/svg-sprite.svg#icon-contrast"></use>
+                        </svg>
+                      </span>
+                      <span class="toggle__contrast-line">
+                        <span class="toggle__contrast-dot"></span>
+                      </span>
+                    </label>
+                  </section>
+                  <section class="filter__btns">
+                    <button class="filter__post" type="submit" name="post">Запостить</button>
+                    <button class="filter__cancel" type="reset" name="cansel-post">Отмена</button>
+                  </section>
+                </section>
+              </section>
+            </form>
+          </section>
+        </section>
+      </section>
+
     </main>
     <footer class="page-footer">
       <section class="page-footer__wrapper">
