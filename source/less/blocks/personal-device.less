@@ -1,0 +1,52 @@
+.personal-device {
+  flex-shrink: 0;
+  background-color: #f2f2f2;
+  margin: 0 auto;
+  order: 4;
+}
+
+.personal-device__wrapper {
+  width: 280px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: plum;
+  min-height: 340px; //сетка
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .personal-device {
+    flex-shrink: 0;
+    background-color: #f2f2f2;
+    margin: 0 auto;
+    order: 2;
+  }
+
+  .personal-device__wrapper {
+    width: 620px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: plum;
+    min-height: 340px; //сетка
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .personal-device {
+    flex-shrink: 0;
+    background-color: #f2f2f2;
+    margin: 0;
+    margin-right: auto;
+    order: 2;
+  }
+
+  .personal-device__wrapper {
+    width: 470px;
+    padding-left: 0px;
+    padding-right: 10px;
+    background-color: plum;
+    min-height: 340px; //сетка
+    margin: 0 auto;
+  }
+}

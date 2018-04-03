@@ -1,0 +1,212 @@
+.personal-info {
+  flex-shrink: 0;
+  background-color: #ffffff;
+  margin: 0 auto;
+  order: 1;
+}
+
+.personal-info__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  width: 280px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: yellow;
+  margin: 0 auto;
+}
+
+#surname,
+#name,
+#patronymic {
+  flex-shrink: 0;
+  box-sizing: border-box;
+  border: 2px solid #e5e5e5;
+  border-radius: 2px;
+  width: 100%;
+  background-color: transparent;
+  padding-top: 22px;
+  padding-bottom: 19px;
+  padding-left: 20px;
+  margin-bottom: 15px;
+  outline: #d22856;
+
+  &:hover {
+    border-color: #283645;
+  }
+
+  &:focus {
+    border-color: #d22856;
+  }
+}
+
+label[for="surname"],
+label[for="name"],
+label[for="patronymic"] {
+  flex-shrink: 0;
+  display: inline-block;
+  width: 280px;
+  font-size: 14px;
+  line-height: 30px;
+  .font(@fontRegular, normal, normal);
+  color: #d22856;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 6px;
+  padding-left: 23px;
+  cursor: pointer;
+}
+
+label[for="surname"]:hover #surname {
+  border-color: #283645;
+}
+
+label[for="name"]:hover #name {
+  border-color: #283645;
+}
+
+label[for="patronymic"]:hover #patronymic {
+  border-color: #283645;
+}
+
+/*Стилизация плэйсхолдера*/
+#surname,
+#name,
+#patronymic {
+  &::-webkit-input-placeholder {
+    font-size: 18px;
+    padding-left: 0px;
+    line-height: 30px;
+    color: #283645;
+    .font(@fontRegular, normal, normal);
+  }
+  &::-moz-placeholder {
+    font-size: 18px;
+    padding-left: 0px;
+    line-height: 30px;
+    color: #283645;
+    .font(@fontRegular, normal, normal);
+  }   /* Firefox 19+ */
+  &:-moz-placeholder {
+    font-size: 18px;
+    padding-left: 0px;
+    line-height: 30px;
+    color: #283645;
+    .font(@fontRegular, normal, normal);
+  }      /* Firefox 18- */
+  &:-ms-input-placeholder {
+    font-size: 18px;
+    padding-left: 0px;
+    line-height: 30px;
+    color: #283645;
+    .font(@fontRegular, normal, normal);
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .personal-info {
+    flex-shrink: 0;
+    background-color: #ffffff;
+    margin: 0 auto;
+    order: 1;
+  }
+
+  .personal-info__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    width: 620px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto;
+  }
+
+  label[for="surname"],
+  label[for="name"],
+  label[for="patronymic"] {
+    flex-shrink: 0;
+    display: inline-block;
+    width: 95px;
+    font-size: 14px;
+    line-height: 30px;
+    .font(@fontRegular, normal, normal);
+    color: #d22856;
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 6px;
+    padding-left: 0px;
+    margin-top: 18px;
+  }
+
+  #surname,
+  #name,
+  #patronymic {
+    flex-shrink: 0;
+    box-sizing: border-box;
+    border: 2px solid #e5e5e5;
+    border-radius: 1px;
+    width: 525px;
+    background-color: transparent;
+    padding-top: 22px;
+    padding-bottom: 19px;
+    padding-left: 20px;
+    margin-bottom: 52px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .personal-info {
+    flex-shrink: 0;
+    background-color: #ffffff;
+    margin: 0;
+    margin-left: auto;
+    order: 1;
+  }
+
+  .personal-info__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    width: 470px;
+    padding-left: 10px;
+    padding-right: 0px;
+    padding-top: 24px;
+    margin: 0 auto;
+  }
+
+  label[for="surname"],
+  label[for="name"],
+  label[for="patronymic"] {
+    flex-shrink: 0;
+    display: inline-block;
+    width: 95px;
+    font-size: 14px;
+    line-height: 30px;
+    .font(@fontRegular, normal, normal);
+    color: #d22856;
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 6px;
+    padding-left: 0px;
+    margin-top: 18px;
+  }
+
+  #surname,
+  #name,
+  #patronymic {
+    flex-shrink: 0;
+    box-sizing: border-box;
+    border: 2px solid #e5e5e5;
+    border-radius: 1px;
+    width: 340px;
+    background-color: transparent;
+    padding-top: 22px;
+    padding-bottom: 19px;
+    padding-left: 20px;
+    margin-right: 35px;
+    margin-bottom: 53px;
+  }
+}

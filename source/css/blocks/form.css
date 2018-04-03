@@ -1,0 +1,15 @@
+.form__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 1000px;
+  background-color: green;
+}
+.form__send {
+  width: 280px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: red;
+  min-height: 170px;
+  margin: 0 auto;
+}
+/*# sourceMappingURL=form.css.map */

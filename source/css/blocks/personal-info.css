@@ -1,0 +1,14 @@
+.personal-info {
+  flex-shrink: 0;
+  background-color: #ffffff;
+  margin: 0 auto;
+}
+.personal-info__wrapper {
+  width: 280px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: yellow;
+  min-height: 380px;
+  margin: 0 auto;
+}
+/*# sourceMappingURL=personal-info.css.map */

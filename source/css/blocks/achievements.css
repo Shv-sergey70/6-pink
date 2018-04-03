@@ -1,0 +1,14 @@
+.achievement {
+  flex-shrink: 0;
+  background-color: #f2f2f2;
+  margin: 0 auto;
+}
+.achievement__wrapper {
+  width: 280px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: pink;
+  min-height: 604px;
+  margin: 0 auto;
+}
+/*# sourceMappingURL=achievements.css.map */
