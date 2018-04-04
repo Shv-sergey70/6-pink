@@ -4215,6 +4215,13 @@ body {
   padding-top: 16px;
   padding-bottom: 16px;
 }
+.form__btn:hover {
+  background-color: #1c9b5e;
+}
+.form__btn:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #1c9b5e;
+}
 .form__note {
   width: 280px;
   font-size: 14px;
@@ -4577,6 +4584,7 @@ label[for="patronymic"]:hover #patronymic {
 }
 .achievement {
   flex-shrink: 0;
+  width: 100%;
   background-color: #f2f2f2;
   margin: 0 auto;
   order: 2;
@@ -4665,6 +4673,22 @@ label[for="hotel"]::after {
   border-left: 3px solid #d22856;
   border-bottom: 3px solid #d22856;
   transform: translateY(50%) translateX(40%) rotate(-45deg);
+}
+label[for="selfi"]:hover::before,
+label[for="burn"]:hover::before,
+label[for="norris"]:hover::before,
+label[for="souvenirs"]:hover::before,
+label[for="tower"]:hover::before,
+label[for="hotel"]:hover::before {
+  border-color: #283645;
+}
+label[for="selfi"] :active::before,
+label[for="burn"] :active::before,
+label[for="norris"] :active::before,
+label[for="souvenirs"] :active::before,
+label[for="tower"] :active::before,
+label[for="hotel"] :active::before {
+  border-color: #d22856;
 }
 label[for="hotel"] {
   margin-bottom: 45px;
@@ -5311,6 +5335,7 @@ label[for="email"]:hover #name {
 }
 .personal-device {
   flex-shrink: 0;
+  width: 100%;
   background-color: #f2f2f2;
   margin: 0 auto;
   order: 4;
@@ -5379,7 +5404,17 @@ label[for="Windows"]::before {
   background-color: #ffffff;
   border-radius: 50%;
   border: 10px solid #ffffff;
-  box-shadow: 2px 0 0 0 #e5e5e5;
+  box-shadow: 0 0 0 2px #e5e5e5;
+}
+label[for="iOS"]:hover::before,
+label[for="Android"]:hover::before,
+label[for="Windows"]:hover::before {
+  box-shadow: 0 0 0 2px #434f5c;
+}
+label[for="iOS"]:active::before,
+label[for="Android"]:active::before,
+label[for="Windows"]:active::before {
+  box-shadow: 0 0 0 2px #d22856;
 }
 #iOS:checked ~ label[for="iOS"]::before,
 #Android:checked ~ label[for="Android"]::before,
@@ -5466,7 +5501,7 @@ label[for="Windows"]::before {
     background-color: #ffffff;
     border-radius: 50%;
     border: 10px solid #ffffff;
-    box-shadow: 2px 0 0 0 #e5e5e5;
+    box-shadow: 0 0 0 2px #e5e5e5;
   }
   #iOS:checked ~ label[for="iOS"]::before,
   #Android:checked ~ label[for="Android"]::before,
@@ -5555,7 +5590,7 @@ label[for="Windows"]::before {
     background-color: #ffffff;
     border-radius: 50%;
     border: 10px solid #ffffff;
-    box-shadow: 2px 0 0 0 #e5e5e5;
+    box-shadow: 0 0 0 2px #e5e5e5;
   }
   #iOS:checked ~ label[for="iOS"]::before,
   #Android:checked ~ label[for="Android"]::before,

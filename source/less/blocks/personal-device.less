@@ -1,5 +1,6 @@
 .personal-device {
   flex-shrink: 0;
+  width: 100%;
   background-color: #f2f2f2;
   margin: 0 auto;
   order: 4;
@@ -69,7 +70,19 @@ label[for="Windows"]::before {
   background-color: #ffffff;
   border-radius: 50%;
   border: 10px solid #ffffff;
-  box-shadow: 2px 0 0 0 #e5e5e5;
+  box-shadow: 0 0 0 2px #e5e5e5;
+}
+
+label[for="iOS"],
+label[for="Android"],
+label[for="Windows"] {
+  &:hover::before {
+    box-shadow: 0 0 0 2px #434f5c;
+  }
+
+  &:active::before {
+    box-shadow: 0 0 0 2px #d22856;
+  }
 }
 
 #iOS:checked ~ label[for="iOS"]::before,
@@ -159,7 +172,7 @@ label[for="Windows"]::before {
     background-color: #ffffff;
     border-radius: 50%;
     border: 10px solid #ffffff;
-    box-shadow: 2px 0 0 0 #e5e5e5;
+    box-shadow: 0 0 0 2px #e5e5e5;
   }
 
   #iOS:checked ~ label[for="iOS"]::before,
@@ -251,7 +264,7 @@ label[for="Windows"]::before {
     background-color: #ffffff;
     border-radius: 50%;
     border: 10px solid #ffffff;
-    box-shadow: 2px 0 0 0 #e5e5e5;
+    box-shadow: 0 0 0 2px #e5e5e5;
   }
 
   #iOS:checked ~ label[for="iOS"]::before,
