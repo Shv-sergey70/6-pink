@@ -4241,6 +4241,7 @@ body {
   padding-right: 20px;
   background-color: yellow;
   margin: 0 auto;
+  padding-bottom: 28px;
 }
 #surname,
 #name,
@@ -4366,6 +4367,7 @@ label[for="patronymic"]:hover #patronymic {
     padding-left: 20px;
     padding-right: 20px;
     margin: 0 auto;
+    padding-bottom: 0px;
   }
   label[for="surname"],
   label[for="name"],
@@ -4462,14 +4464,22 @@ label[for="patronymic"]:hover #patronymic {
   order: 2;
 }
 .achievement__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
   width: 280px;
   padding-left: 20px;
   padding-right: 20px;
-  background-color: pink;
-  min-height: 604px;
   margin: 0 auto;
+  padding-top: 38px;
 }
 .achievement__title {
+  flex-shrink: 0;
+  display: block;
+  width: 230px;
+  text-align: center;
+  margin: 0 auto;
   color: #d22856;
   font-size: 14px;
   line-height: 18px;
@@ -4478,6 +4488,74 @@ label[for="patronymic"]:hover #patronymic {
   font-weight: normal;
   font-style: normal;
   text-transform: uppercase;
+}
+.achievement__wrapper input {
+  display: none;
+}
+label[for="selfi"] {
+  margin-top: 43px;
+}
+label[for="selfi"],
+label[for="burn"],
+label[for="norris"],
+label[for="souvenirs"],
+label[for="tower"],
+label[for="hotel"] {
+  position: relative;
+  width: 280px;
+  padding-left: 70px;
+  color: #283645;
+  font-size: 18px;
+  line-height: 30px;
+  font-family: 'OpenSans';
+  src: url('../fonts/OpenSans.woff') format('woff'), url('../fonts/OpenSans.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  margin-bottom: 52px;
+}
+label[for="selfi"]::before,
+label[for="burn"]::before,
+label[for="norris"]::before,
+label[for="souvenirs"]::before,
+label[for="tower"]::before,
+label[for="hotel"]::before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: -4px;
+  width: 39px;
+  height: 39px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  border: 2px solid #e5e5e5;
+}
+label[for="selfi"]::after,
+label[for="burn"]::after,
+label[for="norris"]::after,
+label[for="souvenirs"]::after,
+label[for="tower"]::after,
+label[for="hotel"]::after {
+  content: "";
+  display: none;
+  position: absolute;
+  left: 0px;
+  width: 22px;
+  height: 11px;
+  background-color: transparent;
+  border-left: 3px solid #d22856;
+  border-bottom: 3px solid #d22856;
+  transform: translateY(50%) translateX(25%) rotate(-45deg);
+}
+label[for="hotel"] {
+  margin-bottom: 45px;
+}
+#selfi:checked ~ label[for="selfi"]::after,
+#burn:checked ~ label[for="burn"]::after,
+#norris:checked ~ label[for="norris"]::after,
+#souvenirs:checked ~ label[for="souvenirs"]::after,
+#tower:checked ~ label[for="tower"]::after,
+#hotel:checked ~ label[for="hotel"]::after {
+  display: inline;
 }
 @media (min-width: 660px) {
   .achievement {
@@ -4522,8 +4600,119 @@ label[for="patronymic"]:hover #patronymic {
   padding-left: 20px;
   padding-right: 20px;
   background-color: violet;
-  min-height: 287px;
   margin: 0 auto;
+  padding-top: 34px;
+  padding-bottom: 27px;
+}
+.personal-contacts__border {
+  display: flex;
+  flex-wrap: wrap;
+}
+#phone,
+#email {
+  flex-shrink: 0;
+  box-sizing: border-box;
+  border: 2px solid #e5e5e5;
+  border-radius: 2px;
+  width: 100%;
+  background-color: transparent;
+  padding-top: 22px;
+  padding-bottom: 19px;
+  padding-left: 20px;
+  margin-bottom: 15px;
+  outline: #d22856;
+}
+#phone:hover,
+#email:hover {
+  border-color: #283645;
+}
+#phone:focus,
+#email:focus {
+  border-color: #d22856;
+}
+label[for="phone"],
+label[for="email"] {
+  flex-shrink: 0;
+  display: inline-block;
+  width: 280px;
+  font-size: 14px;
+  line-height: 30px;
+  font-family: 'OpenSans';
+  src: url('../fonts/OpenSans.woff') format('woff'), url('../fonts/OpenSans.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  color: #d22856;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 6px;
+  padding-left: 23px;
+  cursor: pointer;
+}
+label[for="phone"]:hover #surname {
+  border-color: #283645;
+}
+label[for="email"]:hover #name {
+  border-color: #283645;
+}
+/*Стилизация плэйсхолдера*/
+#phone,
+#email {
+  /* Firefox 19+ */
+  /* Firefox 18- */
+}
+#phone::-webkit-input-placeholder,
+#email::-webkit-input-placeholder {
+  font-size: 18px;
+  padding-left: 0px;
+  line-height: 30px;
+  color: #283645;
+  font-family: 'OpenSans';
+  src: url('../fonts/OpenSans.woff') format('woff'), url('../fonts/OpenSans.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+#phone::-moz-placeholder,
+#email::-moz-placeholder {
+  font-size: 18px;
+  padding-left: 0px;
+  line-height: 30px;
+  color: #283645;
+  font-family: 'OpenSans';
+  src: url('../fonts/OpenSans.woff') format('woff'), url('../fonts/OpenSans.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+#phone:-moz-placeholder,
+#email:-moz-placeholder {
+  font-size: 18px;
+  padding-left: 0px;
+  line-height: 30px;
+  color: #283645;
+  font-family: 'OpenSans';
+  src: url('../fonts/OpenSans.woff') format('woff'), url('../fonts/OpenSans.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+#phone:-ms-input-placeholder,
+#email:-ms-input-placeholder {
+  font-size: 18px;
+  padding-left: 0px;
+  line-height: 30px;
+  color: #283645;
+  font-family: 'OpenSans';
+  src: url('../fonts/OpenSans.woff') format('woff'), url('../fonts/OpenSans.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@media (max-width: 659px) {
+  .personal-contacts__title--mobile {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0px;
+  }
 }
 @media (min-width: 660px) {
   .personal-contacts {
@@ -4535,9 +4724,14 @@ label[for="patronymic"]:hover #patronymic {
     width: 620px;
     padding-left: 20px;
     padding-right: 20px;
-    background-color: violet;
-    min-height: 287px;
     margin: 0 auto;
+  }
+  .personal-contacts__border {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .personal-contacts__title {
+    display: block;
   }
 }
 @media (min-width: 1200px) {
@@ -4566,8 +4760,72 @@ label[for="patronymic"]:hover #patronymic {
   padding-left: 20px;
   padding-right: 20px;
   background-color: plum;
-  min-height: 340px;
   margin: 0 auto;
+}
+.personal-device__border {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.personal-device__title {
+  flex-shrink: 0;
+  display: block;
+  width: 230px;
+  text-align: center;
+  margin: 0 auto;
+  color: #d22856;
+  font-size: 14px;
+  line-height: 18px;
+  font-family: 'OpenSans';
+  src: url('../fonts/OpenSans.woff') format('woff'), url('../fonts/OpenSans.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  text-transform: uppercase;
+  padding-top: 38px;
+}
+#iOS,
+#Android,
+#Windows {
+  display: none;
+}
+label[for="iOS"] {
+  margin-top: 40px;
+}
+label[for="iOS"],
+label[for="Android"],
+label[for="Windows"] {
+  position: relative;
+  display: block;
+  width: 210px;
+  padding-left: 70px;
+  color: #283645;
+  font-size: 18px;
+  line-height: 30px;
+  font-family: 'OpenSans';
+  src: url('../fonts/OpenSans.woff') format('woff'), url('../fonts/OpenSans.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  margin-bottom: 45px;
+}
+label[for="iOS"]::before,
+label[for="Android"]::before,
+label[for="Windows"]::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: 1px;
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  border: 10px solid #ffffff;
+  box-shadow: 2px 0 0 0 #e5e5e5;
+}
+#iOS:checked ~ label[for="iOS"]::before,
+#Android:checked ~ label[for="Android"]::before,
+#Windows:checked ~ label[for="Windows"]::before {
+  background-color: #d22856;
 }
 @media (min-width: 660px) {
   .personal-device {
@@ -4580,9 +4838,81 @@ label[for="patronymic"]:hover #patronymic {
     width: 620px;
     padding-left: 20px;
     padding-right: 20px;
-    background-color: plum;
-    min-height: 340px;
+    padding-top: 14px;
     margin: 0 auto;
+  }
+  .personal-device__border {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    border: 2px solid #e5e5e5;
+    padding-bottom: 11px;
+  }
+  .personal-device__title {
+    position: absolute;
+    top: -15px;
+    left: 122px;
+    flex-shrink: 0;
+    display: block;
+    width: 370px;
+    text-align: center;
+    margin: 0 auto;
+    color: #d22856;
+    font-size: 14px;
+    line-height: 30px;
+    font-family: 'OpenSans';
+    src: url('../fonts/OpenSans.woff') format('woff'), url('../fonts/OpenSans.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    text-transform: uppercase;
+    padding-top: 0px;
+    background-color: #ffffff;
+  }
+  #iOS,
+  #Android,
+  #Windows {
+    display: none;
+  }
+  label[for="iOS"] {
+    margin-top: 57.5px;
+  }
+  label[for="iOS"],
+  label[for="Android"],
+  label[for="Windows"] {
+    position: relative;
+    display: block;
+    width: 210px;
+    padding-left: 118px;
+    color: #283645;
+    font-size: 18px;
+    line-height: 30px;
+    font-family: 'OpenSans';
+    src: url('../fonts/OpenSans.woff') format('woff'), url('../fonts/OpenSans.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    margin-bottom: 45px;
+  }
+  label[for="iOS"]::before,
+  label[for="Android"]::before,
+  label[for="Windows"]::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: 59px;
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    border: 10px solid #ffffff;
+    box-shadow: 2px 0 0 0 #e5e5e5;
+  }
+  #iOS:checked ~ label[for="iOS"]::before,
+  #Android:checked ~ label[for="Android"]::before,
+  #Windows:checked ~ label[for="Windows"]::before {
+    background-color: #d22856;
   }
 }
 @media (min-width: 1200px) {
@@ -4595,11 +4925,83 @@ label[for="patronymic"]:hover #patronymic {
   }
   .personal-device__wrapper {
     width: 470px;
-    padding-left: 0px;
     padding-right: 10px;
-    background-color: plum;
-    min-height: 340px;
+    padding-top: 17px;
+    padding-left: 0px;
+  }
+  .personal-device__border {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    border: 2px solid #e5e5e5;
+    padding-bottom: 15px;
+    margin-left: 35px;
+  }
+  .personal-device__title {
+    position: absolute;
+    top: -15px;
+    left: 30px;
+    flex-shrink: 0;
+    display: block;
+    width: 370px;
+    text-align: center;
     margin: 0 auto;
+    color: #d22856;
+    font-size: 14px;
+    line-height: 30px;
+    font-family: 'OpenSans';
+    src: url('../fonts/OpenSans.woff') format('woff'), url('../fonts/OpenSans.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    text-transform: uppercase;
+    padding-top: 0px;
+    background-color: #ffffff;
+  }
+  #iOS,
+  #Android,
+  #Windows {
+    display: none;
+  }
+  label[for="iOS"] {
+    margin-top: 57.5px;
+  }
+  label[for="iOS"],
+  label[for="Android"],
+  label[for="Windows"] {
+    position: relative;
+    display: block;
+    width: 210px;
+    padding-left: 134px;
+    color: #283645;
+    font-size: 18px;
+    line-height: 30px;
+    font-family: 'OpenSans';
+    src: url('../fonts/OpenSans.woff') format('woff'), url('../fonts/OpenSans.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    margin-bottom: 45px;
+  }
+  label[for="iOS"]::before,
+  label[for="Android"]::before,
+  label[for="Windows"]::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 75px;
+    display: block;
+    width: 15px;
+    height: 15px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    border: 10px solid #ffffff;
+    box-shadow: 2px 0 0 0 #e5e5e5;
+  }
+  #iOS:checked ~ label[for="iOS"]::before,
+  #Android:checked ~ label[for="Android"]::before,
+  #Windows:checked ~ label[for="Windows"]::before {
+    background-color: #d22856;
   }
 }
 .emotions {

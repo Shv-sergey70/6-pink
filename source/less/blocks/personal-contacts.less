@@ -10,8 +10,105 @@
   padding-left: 20px;
   padding-right: 20px;
   background-color: violet;
-  min-height: 287px; //сетка
   margin: 0 auto;
+  padding-top: 34px;
+  padding-bottom: 27px;
+}
+
+.personal-contacts__border {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#phone,
+#email {
+  flex-shrink: 0;
+  box-sizing: border-box;
+  border: 2px solid #e5e5e5;
+  border-radius: 2px;
+  width: 100%;
+  background-color: transparent;
+  padding-top: 22px;
+  padding-bottom: 19px;
+  padding-left: 20px;
+  margin-bottom: 15px;
+  outline: #d22856;
+
+  &:hover {
+    border-color: #283645;
+  }
+
+  &:focus {
+    border-color: #d22856;
+  }
+}
+
+label[for="phone"],
+label[for="email"] {
+  flex-shrink: 0;
+  display: inline-block;
+  width: 280px;
+  font-size: 14px;
+  line-height: 30px;
+  .font(@fontRegular, normal, normal);
+  color: #d22856;
+  text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 6px;
+  padding-left: 23px;
+  cursor: pointer;
+}
+
+label[for="phone"]:hover #surname {
+  border-color: #283645;
+}
+
+label[for="email"]:hover #name {
+  border-color: #283645;
+}
+
+/*Стилизация плэйсхолдера*/
+#phone,
+#email{
+  &::-webkit-input-placeholder {
+    font-size: 18px;
+    padding-left: 0px;
+    line-height: 30px;
+    color: #283645;
+    .font(@fontRegular, normal, normal);
+  }
+  &::-moz-placeholder {
+    font-size: 18px;
+    padding-left: 0px;
+    line-height: 30px;
+    color: #283645;
+    .font(@fontRegular, normal, normal);
+  }   /* Firefox 19+ */
+  &:-moz-placeholder {
+    font-size: 18px;
+    padding-left: 0px;
+    line-height: 30px;
+    color: #283645;
+    .font(@fontRegular, normal, normal);
+  }      /* Firefox 18- */
+  &:-ms-input-placeholder {
+    font-size: 18px;
+    padding-left: 0px;
+    line-height: 30px;
+    color: #283645;
+    .font(@fontRegular, normal, normal);
+  }
+}
+
+@media (max-width: 659px) {
+  .personal-contacts__title--mobile {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0px;
+  } //На мобильной версии визульно скрыли
 }
 
 @media (min-width: @tablet-width) {
@@ -25,9 +122,16 @@
     width: 620px;
     padding-left: 20px;
     padding-right: 20px;
-    background-color: violet;
-    min-height: 287px; //сетка
     margin: 0 auto;
+  }
+
+  .personal-contacts__border {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .personal-contacts__title {
+    display: block;
   }
 }
 
