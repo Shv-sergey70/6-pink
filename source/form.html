@@ -188,19 +188,21 @@
           </section>
           <section class="achievement">
             <div class="achievement__wrapper">
-              <h4 class="achievement__title">Ваши безбашенные достижения в путешествии</h4>
-              <input type="checkbox" id="selfi" name="selfi">
-              <label for="selfi">Сделал селфи с акулой</label>
-              <input type="checkbox" id="burn" name="burn">
-              <label for="burn">Обгорел на пляже</label>
-              <input type="checkbox" id="norris" name="norris">
-              <label for="norris">Видел Чака Норриса</label>
-              <input type="checkbox" id="souvenirs" name="souvenirs">
-              <label for="souvenirs">Накупил сувениров</label>
-              <input type="checkbox" id="tower" name="tower">
-              <label for="tower">Удержал башню</label>
-              <input type="checkbox" id="hotel" name="hotel">
-              <label for="hotel">Разгромил отель</label>
+              <div class="achievement__border">
+                <h4 class="achievement__title">Ваши безбашенные достижения в путешествии</h4>
+                <input type="checkbox" id="selfi" name="selfi" checked>
+                <label for="selfi">Сделал селфи с акулой</label>
+                <input type="checkbox" id="burn" name="burn" checked>
+                <label for="burn">Обгорел на пляже</label>
+                <input type="checkbox" id="norris" name="norris">
+                <label for="norris">Видел Чака Норриса</label>
+                <input type="checkbox" id="souvenirs" name="souvenirs">
+                <label for="souvenirs">Накупил сувениров</label>
+                <input type="checkbox" id="tower" name="tower" checked>
+                <label for="tower">Удержал башню</label>
+                <input type="checkbox" id="hotel" name="hotel">
+                <label for="hotel">Разгромил отель</label>
+              </div>
             </div>
           </section>
           <section class="personal-contacts">
@@ -219,7 +221,7 @@
               <div class="personal-device__border">
                 <h4 class="personal-device__title">С каким приложением путешествовали?</h4>
                 <input type="radio" id="iOS" name="device" value="iOS" checked>
-                <label for="iOS" id="suda">Pink для iOS</label>
+                <label for="iOS">Pink для iOS</label>
                 <input type="radio" id="Android" name="device" value="Android">
                 <label for="Android">Pink на Android</label>
                 <input type="radio" id="Windows" name="device" value="Windows">
@@ -229,17 +231,22 @@
           </section>
           <section class="emotions">
             <div class="emotions__wrapper">
-              Эмоции
+              <div class="emotions__border">
+                <h4 class="emotions__title">Опишите свои эмоции</h4>
+                <textarea id="suda" class="emotions__textarea" name="emotions" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+              </div>
             </div>
           </section>
           <section class="form__send">
-            Кнопка отправить
+            <button class="form__btn" type="submit">Отправить форму</button>
+            <section class="form__note">
+              <span class="form__asterics">*</span> &#8212; Обязательные <span class="form__note-desktop">для заполнения</span>поля
+            </section>
           </section>
         </div>
       </form>
-
     </main>
-    <footer class="page-footer page-footer--photo">
+    <footer class="page-footer page-footer--photo page-footer--form">
       <section class="page-footer__wrapper">
         <section class="page-footer__logo-wrapper">
           <a class="page-footer__logo page-footer__logo--not-main" href="index.html">Логотип - PINK

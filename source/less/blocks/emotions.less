@@ -9,9 +9,36 @@
   width: 280px;
   padding-left: 20px;
   padding-right: 20px;
-  background-color: blue;
-  min-height: 290px; //сетка
   margin: 0 auto;
+  padding-top: 32px;
+  padding-bottom: 10px;
+}
+
+.emotions__title {
+  display: block;
+  width: 280px;
+  text-align: center;
+  margin: 0 auto;
+  color: #d22856;
+  font-size: 14px;
+  line-height: 30px;
+  .font(@fontRegular, normal, normal);
+  text-transform: uppercase;
+}
+
+.emotions__textarea {
+  box-sizing: border-box;
+  width: 280px;
+  min-height: 200px;
+  border: 2px solid #e5e5e5;
+  border-radius: 2px;
+  font-size: 18px;
+  line-height: 30px;
+  color: #283645;
+  .font(@fontRegular, normal, normal);
+  padding: 13px 18px;
+  margin-top: 12px;
+  border-radius: 2px;
 }
 
 @media (min-width: @tablet-width) {
@@ -25,9 +52,46 @@
     width: 620px;
     padding-left: 20px;
     padding-right: 20px;
-    background-color: blue;
-    min-height: 290px; //сетка
     margin: 0 auto;
+    padding-top: 55px;
+    padding-bottom: 10px;
+  }
+
+  .emotions__border {
+    position: relative;
+    border: 2px solid #e5e5e5;
+    padding-bottom: 48px;
+  }
+
+  .emotions__title {
+    position: absolute;
+    top: -15px;
+    left: 178px;
+    display: block;
+    width: 260px;
+    text-align: center;
+    margin: 0 auto;
+    color: #d22856;
+    background-color: #ffffff;
+    font-size: 14px;
+    line-height: 30px;
+    .font(@fontRegular, normal, normal);
+    text-transform: uppercase;
+  }
+
+  .emotions__textarea {
+    box-sizing: border-box;
+    width: 500px;
+    min-height: 192px;
+    border: 2px solid #e5e5e5;
+    border-radius: 2px;
+    font-size: 18px;
+    line-height: 30px;
+    color: #283645;
+    .font(@fontRegular, normal, normal);
+    padding: 13px 18px;
+    margin-top: 45px;
+    margin-left: 58px;
   }
 }
 
@@ -42,8 +106,45 @@
     width: 940px;
     padding-left: 10px;
     padding-right: 10px;
-    background-color: blue;
-    min-height: 290px; //сетка
     margin: 0 auto;
+    padding-top: 55px;
+    padding-bottom: 10px;
+  }
+
+  .emotions__border {
+    position: relative;
+    border: 2px solid #e5e5e5;
+    padding-bottom: 39px;
+  }
+
+  .emotions__title {
+    position: absolute;
+    top: -15px;
+    left: 338px;
+    display: block;
+    width: 260px;
+    text-align: center;
+    margin: 0 auto;
+    color: #d22856;
+    background-color: #ffffff;
+    font-size: 14px;
+    line-height: 30px;
+    .font(@fontRegular, normal, normal);
+    text-transform: uppercase;
+  }
+
+  .emotions__textarea {
+    box-sizing: border-box;
+    width: 820px;
+    min-height: 128px;
+    border: 2px solid #e5e5e5;
+    border-radius: 2px;
+    font-size: 18px;
+    line-height: 30px;
+    color: #283645;
+    .font(@fontRegular, normal, normal);
+    padding: 13px 18px;
+    margin-top: 42px;
+    margin-left: 58px;
   }
 }

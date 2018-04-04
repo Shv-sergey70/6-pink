@@ -2505,6 +2505,9 @@ body {
   opacity: 0.5;
   text-decoration: none;
 }
+.page-footer--form {
+  margin-top: 13px;
+}
 .page-footer--main {
   display: none;
 }
@@ -2667,10 +2670,16 @@ body {
     opacity: 0.5;
     text-decoration: none;
   }
+  .page-footer--form {
+    margin-top: 0px;
+  }
 }
 @media (min-width: 1200px) {
   .page-footer--photo {
     margin-top: 29px;
+  }
+  .page-footer--form {
+    margin-top: -20px;
   }
   .page-footer__wrapper {
     width: 940px;
@@ -4181,48 +4190,155 @@ body {
 .form__wrapper {
   display: flex;
   flex-wrap: wrap;
-  min-height: 1000px;
-  background-color: green;
 }
 .form__send {
   width: 280px;
   padding-left: 20px;
   padding-right: 20px;
-  background-color: red;
-  min-height: 170px;
   margin: 0 auto;
   order: 6;
+  padding-top: 34px;
+}
+.form__btn {
+  width: 280px;
+  font-size: 18px;
+  line-height: 30px;
+  font-family: 'opensansbold';
+  src: url('../fonts/opensansbold.woff') format('woff'), url('../fonts/opensansbold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  border-radius: 2px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #2aab6d;
+  border: none;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+.form__note {
+  width: 280px;
+  font-size: 14px;
+  line-height: 30px;
+  color: #283645;
+  font-family: 'OpenSans';
+  src: url('../fonts/OpenSans.woff') format('woff'), url('../fonts/OpenSans.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 36px;
+}
+.form__asterics {
+  color: #d22856;
+}
+.form__note-desktop {
+  display: none;
 }
 @media (min-width: 660px) {
   .form__wrapper {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    min-height: 1000px;
-    background-color: green;
   }
   .form__send {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     width: 620px;
     padding-left: 20px;
     padding-right: 20px;
-    background-color: red;
-    min-height: 170px;
     margin: 0 auto;
+    order: 6;
+    padding-top: 57px;
+    padding-bottom: 50px;
+  }
+  .form__btn {
+    width: 300px;
+    height: 63px;
+    font-size: 18px;
+    line-height: 30px;
+    font-family: 'opensansbold';
+    src: url('../fonts/opensansbold.woff') format('woff'), url('../fonts/opensansbold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    border-radius: 2px;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #2aab6d;
+    border: none;
+    padding-top: 16px;
+    padding-bottom: 17px;
+  }
+  .form__note {
+    width: 200px;
+    font-size: 14px;
+    line-height: 30px;
+    color: #283645;
+    font-family: 'OpenSans';
+    src: url('../fonts/OpenSans.woff') format('woff'), url('../fonts/OpenSans.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    text-transform: uppercase;
+    text-align: right;
+    margin-top: 21px;
+  }
+  .form__asterics {
+    color: #d22856;
   }
 }
 @media (min-width: 1200px) {
   .form__wrapper {
     display: flex;
     flex-wrap: wrap;
-    min-height: 1000px;
-    background-color: green;
   }
   .form__send {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     width: 940px;
     padding-left: 10px;
     padding-right: 10px;
-    background-color: red;
-    min-height: 170px;
     margin: 0 auto;
+    order: 6;
+    padding-top: 55px;
+    padding-bottom: 20px;
+  }
+  .form__btn {
+    width: 300px;
+    height: 63px;
+    font-size: 18px;
+    line-height: 30px;
+    font-family: 'opensansbold';
+    src: url('../fonts/opensansbold.woff') format('woff'), url('../fonts/opensansbold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    border-radius: 2px;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #2aab6d;
+    border: none;
+    padding-top: 16px;
+    padding-bottom: 17px;
+  }
+  .form__note {
+    width: 320px;
+    font-size: 14px;
+    line-height: 30px;
+    color: #283645;
+    font-family: 'OpenSans';
+    src: url('../fonts/OpenSans.woff') format('woff'), url('../fonts/OpenSans.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    text-transform: uppercase;
+    text-align: right;
+    margin-top: 19px;
+    margin-right: 4px;
+  }
+  .form__asterics {
+    color: #d22856;
+  }
+  .form__note-desktop {
+    display: inline;
   }
 }
 .personal-info {
@@ -4239,7 +4355,6 @@ body {
   width: 280px;
   padding-left: 20px;
   padding-right: 20px;
-  background-color: yellow;
   margin: 0 auto;
   padding-bottom: 28px;
 }
@@ -4456,6 +4571,9 @@ label[for="patronymic"]:hover #patronymic {
     margin-right: 35px;
     margin-bottom: 53px;
   }
+  #patronymic {
+    margin-bottom: 20px;
+  }
 }
 .achievement {
   flex-shrink: 0;
@@ -4464,15 +4582,17 @@ label[for="patronymic"]:hover #patronymic {
   order: 2;
 }
 .achievement__wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  align-content: flex-start;
   width: 280px;
   padding-left: 20px;
   padding-right: 20px;
   margin: 0 auto;
   padding-top: 38px;
+}
+.achievement__border {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
 }
 .achievement__title {
   flex-shrink: 0;
@@ -4539,12 +4659,12 @@ label[for="hotel"]::after {
   display: none;
   position: absolute;
   left: 0px;
-  width: 22px;
-  height: 11px;
+  width: 20px;
+  height: 8px;
   background-color: transparent;
   border-left: 3px solid #d22856;
   border-bottom: 3px solid #d22856;
-  transform: translateY(50%) translateX(25%) rotate(-45deg);
+  transform: translateY(50%) translateX(40%) rotate(-45deg);
 }
 label[for="hotel"] {
   margin-bottom: 45px;
@@ -4560,7 +4680,7 @@ label[for="hotel"] {
 @media (min-width: 660px) {
   .achievement {
     flex-shrink: 0;
-    background-color: #f2f2f2;
+    background-color: #ffffff;
     margin: 0 auto;
     order: 4;
   }
@@ -4568,15 +4688,114 @@ label[for="hotel"] {
     width: 620px;
     padding-left: 20px;
     padding-right: 20px;
-    background-color: pink;
-    min-height: 604px;
     margin: 0 auto;
+    padding-top: 23px;
+    margin-bottom: 10px;
+  }
+  .achievement__border {
+    align-items: flex-start;
+    align-content: flex-start;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid #e5e5e5;
+    margin-top: 15px;
+    padding-left: 58px;
+    padding-top: 42px;
+    padding-bottom: 7px;
+  }
+  .achievement__title {
+    position: absolute;
+    top: -10px;
+    left: 90px;
+    flex-shrink: 0;
+    display: block;
+    background-color: #ffffff;
+    width: 436px;
+    text-align: center;
+    margin: 0 auto;
+    color: #d22856;
+    font-size: 14px;
+    line-height: 18px;
+    font-family: 'OpenSans';
+    src: url('../fonts/OpenSans.woff') format('woff'), url('../fonts/OpenSans.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    text-transform: uppercase;
+  }
+  .achievement__wrapper input {
+    display: none;
+  }
+  label[for="selfi"] {
+    margin-top: 15px;
+  }
+  label[for="selfi"],
+  label[for="burn"],
+  label[for="norris"],
+  label[for="souvenirs"],
+  label[for="tower"],
+  label[for="hotel"] {
+    position: relative;
+    width: 280px;
+    padding-left: 60px;
+    color: #283645;
+    font-size: 18px;
+    line-height: 30px;
+    font-family: 'OpenSans';
+    src: url('../fonts/OpenSans.woff') format('woff'), url('../fonts/OpenSans.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    margin-bottom: 52px;
+  }
+  label[for="selfi"]::before,
+  label[for="burn"]::before,
+  label[for="norris"]::before,
+  label[for="souvenirs"]::before,
+  label[for="tower"]::before,
+  label[for="hotel"]::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: -4px;
+    width: 39px;
+    height: 39px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    border: 2px solid #e5e5e5;
+  }
+  label[for="selfi"]::after,
+  label[for="burn"]::after,
+  label[for="norris"]::after,
+  label[for="souvenirs"]::after,
+  label[for="tower"]::after,
+  label[for="hotel"]::after {
+    content: "";
+    display: none;
+    position: absolute;
+    left: 0px;
+    width: 20px;
+    height: 8px;
+    background-color: transparent;
+    border-left: 3px solid #d22856;
+    border-bottom: 3px solid #d22856;
+    transform: translateY(50%) translateX(40%) rotate(-45deg);
+  }
+  label[for="hotel"] {
+    margin-bottom: 45px;
+  }
+  #selfi:checked ~ label[for="selfi"]::after,
+  #burn:checked ~ label[for="burn"]::after,
+  #norris:checked ~ label[for="norris"]::after,
+  #souvenirs:checked ~ label[for="souvenirs"]::after,
+  #tower:checked ~ label[for="tower"]::after,
+  #hotel:checked ~ label[for="hotel"]::after {
+    display: inline;
   }
 }
 @media (min-width: 1200px) {
   .achievement {
     flex-shrink: 0;
-    background-color: #f2f2f2;
+    background-color: #ffffff;
     margin: 0 auto;
     order: 4;
   }
@@ -4584,9 +4803,130 @@ label[for="hotel"] {
     width: 940px;
     padding-left: 10px;
     padding-right: 10px;
-    background-color: pink;
-    min-height: 604px;
     margin: 0 auto;
+    padding-top: 23px;
+    margin-bottom: 10px;
+  }
+  .achievement__border {
+    align-items: flex-start;
+    align-content: flex-start;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid #e5e5e5;
+    margin-top: 15px;
+    padding-left: 58px;
+    padding-top: 57px;
+    padding-bottom: 8px;
+  }
+  .achievement__title {
+    position: absolute;
+    top: -9px;
+    left: 250px;
+    flex-shrink: 0;
+    display: block;
+    background-color: #ffffff;
+    width: 436px;
+    text-align: center;
+    margin: 0 auto;
+    color: #d22856;
+    font-size: 14px;
+    line-height: 18px;
+    font-family: 'OpenSans';
+    src: url('../fonts/OpenSans.woff') format('woff'), url('../fonts/OpenSans.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    text-transform: uppercase;
+  }
+  .achievement__wrapper input {
+    display: none;
+  }
+  label[for="selfi"] {
+    margin-top: 0px;
+  }
+  label[for="selfi"],
+  label[for="burn"],
+  label[for="norris"],
+  label[for="souvenirs"],
+  label[for="tower"],
+  label[for="hotel"] {
+    position: relative;
+    width: 200px;
+    padding-left: 60px;
+    color: #283645;
+    font-size: 18px;
+    line-height: 30px;
+    font-family: 'OpenSans';
+    src: url('../fonts/OpenSans.woff') format('woff'), url('../fonts/OpenSans.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    margin-bottom: 52px;
+  }
+  label[for="selfi"]::before,
+  label[for="burn"]::before,
+  label[for="norris"]::before,
+  label[for="souvenirs"]::before,
+  label[for="tower"]::before,
+  label[for="hotel"]::before {
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: -4px;
+    width: 39px;
+    height: 39px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    border: 2px solid #e5e5e5;
+  }
+  label[for="selfi"]::after,
+  label[for="burn"]::after,
+  label[for="norris"]::after,
+  label[for="souvenirs"]::after,
+  label[for="tower"]::after,
+  label[for="hotel"]::after {
+    content: "";
+    display: none;
+    position: absolute;
+    left: 0px;
+    width: 20px;
+    height: 8px;
+    background-color: transparent;
+    border-left: 3px solid #d22856;
+    border-bottom: 3px solid #d22856;
+    transform: translateY(50%) translateX(40%) rotate(-45deg);
+  }
+  label[for="hotel"] {
+    margin-bottom: 45px;
+  }
+  #selfi:checked ~ label[for="selfi"]::after,
+  #burn:checked ~ label[for="burn"]::after,
+  #norris:checked ~ label[for="norris"]::after,
+  #souvenirs:checked ~ label[for="souvenirs"]::after,
+  #tower:checked ~ label[for="tower"]::after,
+  #hotel:checked ~ label[for="hotel"]::after {
+    display: inline;
+  }
+  label[for="selfi"] {
+    order: 2;
+  }
+  label[for="burn"] {
+    order: 5;
+  }
+  label[for="norris"] {
+    order: 3;
+    margin-left: 55px;
+  }
+  label[for="souvenirs"] {
+    order: 6;
+    margin-left: 55px;
+  }
+  label[for="tower"] {
+    order: 4;
+    margin-left: 35px;
+  }
+  label[for="hotel"] {
+    order: 7;
+    margin-left: 35px;
   }
 }
 .personal-contacts {
@@ -4599,7 +4939,6 @@ label[for="hotel"] {
   width: 280px;
   padding-left: 20px;
   padding-right: 20px;
-  background-color: violet;
   margin: 0 auto;
   padding-top: 34px;
   padding-bottom: 27px;
@@ -4725,13 +5064,119 @@ label[for="email"]:hover #name {
     padding-left: 20px;
     padding-right: 20px;
     margin: 0 auto;
+    padding-top: 51px;
   }
   .personal-contacts__border {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
+    border: 2px solid #e5e5e5;
+    margin-top: 15px;
+    padding-left: 58px;
+    padding-top: 45px;
+    padding-bottom: 0px;
   }
   .personal-contacts__title {
+    position: absolute;
+    top: -15px;
+    left: 178px;
+    flex-shrink: 0;
     display: block;
+    width: 260px;
+    text-align: center;
+    margin: 0 auto;
+    color: #d22856;
+    font-size: 14px;
+    line-height: 30px;
+    font-family: 'OpenSans';
+    src: url('../fonts/OpenSans.woff') format('woff'), url('../fonts/OpenSans.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    text-transform: uppercase;
+    padding-top: 0px;
+    background-color: #ffffff;
+  }
+  #phone {
+    order: 2;
+  }
+  #email {
+    order: 4;
+  }
+  label[for="phone"] {
+    order: 3;
+  }
+  label[for="email"] {
+    order: 5;
+  }
+  #phone,
+  #email {
+    flex-shrink: 0;
+    box-sizing: border-box;
+    border: 2px solid #e5e5e5;
+    border-radius: 2px;
+    width: 500px;
+    background-color: transparent;
+    padding-top: 22px;
+    padding-bottom: 19px;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    outline: #d22856;
+  }
+  #phone:hover,
+  #email:hover {
+    border-color: #283645;
+  }
+  #phone:focus,
+  #email:focus {
+    border-color: #d22856;
+  }
+  label[for="phone"],
+  label[for="email"] {
+    position: relative;
+    flex-shrink: 0;
+    display: inline-block;
+    width: 280px;
+    font-size: 14px;
+    line-height: 30px;
+    font-family: 'OpenSans';
+    src: url('../fonts/OpenSans.woff') format('woff'), url('../fonts/OpenSans.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    color: #d22856;
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 30px;
+    padding-left: 20px;
+    cursor: pointer;
+  }
+  label[for="phone"]:hover #surname {
+    border-color: #283645;
+  }
+  label[for="email"]:hover #name {
+    border-color: #283645;
+  }
+  label[for="email"] {
+    margin-bottom: 25px;
+  }
+  label[for="phone"]::after,
+  label[for="email"]::after {
+    content: "";
+    position: absolute;
+    top: -73px;
+    right: -200px;
+    display: block;
+    width: 62px;
+    height: 63px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    cursor: text;
+  }
+  label[for="phone"]::after {
+    background-image: url("../img/form/icon-telephone.svg");
+  }
+  label[for="email"]::after {
+    background-image: url("../img/form/icon-mail.svg");
   }
 }
 @media (min-width: 1200px) {
@@ -4744,9 +5189,124 @@ label[for="email"]:hover #name {
     width: 940px;
     padding-left: 10px;
     padding-right: 10px;
-    background-color: violet;
-    min-height: 287px;
     margin: 0 auto;
+    padding-top: 30px;
+  }
+  .personal-contacts__border {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid #e5e5e5;
+    margin-top: 15px;
+    padding-left: 58px;
+    padding-top: 42px;
+    padding-bottom: 12px;
+  }
+  .personal-contacts__title {
+    position: absolute;
+    top: -15px;
+    left: 338px;
+    flex-shrink: 0;
+    display: block;
+    width: 260px;
+    text-align: center;
+    margin: 0 auto;
+    color: #d22856;
+    font-size: 14px;
+    line-height: 30px;
+    font-family: 'OpenSans';
+    src: url('../fonts/OpenSans.woff') format('woff'), url('../fonts/OpenSans.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    text-transform: uppercase;
+    padding-top: 0px;
+    background-color: #ffffff;
+  }
+  #phone {
+    order: 2;
+  }
+  #email {
+    order: 3;
+  }
+  label[for="phone"] {
+    order: 4;
+  }
+  label[for="email"] {
+    order: 5;
+  }
+  #phone,
+  #email {
+    flex-shrink: 0;
+    box-sizing: border-box;
+    border: 2px solid #e5e5e5;
+    border-radius: 2px;
+    width: 375px;
+    background-color: transparent;
+    padding-top: 22px;
+    padding-bottom: 19px;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    outline: #d22856;
+  }
+  #phone:hover,
+  #email:hover {
+    border-color: #283645;
+  }
+  #phone:focus,
+  #email:focus {
+    border-color: #d22856;
+  }
+  #email {
+    margin-left: 70px;
+  }
+  label[for="phone"],
+  label[for="email"] {
+    position: relative;
+    flex-shrink: 0;
+    display: inline-block;
+    width: 375px;
+    font-size: 14px;
+    line-height: 30px;
+    font-family: 'OpenSans';
+    src: url('../fonts/OpenSans.woff') format('woff'), url('../fonts/OpenSans.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    color: #d22856;
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 0px;
+    padding-left: 20px;
+    cursor: pointer;
+  }
+  label[for="phone"]:hover #surname {
+    border-color: #283645;
+  }
+  label[for="email"]:hover #name {
+    border-color: #283645;
+  }
+  label[for="email"] {
+    margin-bottom: 0px;
+    margin-left: 50px;
+  }
+  label[for="phone"]::after,
+  label[for="email"]::after {
+    content: "";
+    position: absolute;
+    top: -73px;
+    right: 20px;
+    display: block;
+    width: 62px;
+    height: 63px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    cursor: text;
+  }
+  label[for="phone"]::after {
+    background-image: url("../img/form/icon-telephone.svg");
+  }
+  label[for="email"]::after {
+    background-image: url("../img/form/icon-mail.svg");
   }
 }
 .personal-device {
@@ -4759,7 +5319,6 @@ label[for="email"]:hover #name {
   width: 280px;
   padding-left: 20px;
   padding-right: 20px;
-  background-color: plum;
   margin: 0 auto;
 }
 .personal-device__border {
@@ -4830,7 +5389,7 @@ label[for="Windows"]::before {
 @media (min-width: 660px) {
   .personal-device {
     flex-shrink: 0;
-    background-color: #f2f2f2;
+    background-color: #ffffff;
     margin: 0 auto;
     order: 2;
   }
@@ -4918,7 +5477,7 @@ label[for="Windows"]::before {
 @media (min-width: 1200px) {
   .personal-device {
     flex-shrink: 0;
-    background-color: #f2f2f2;
+    background-color: #ffffff;
     margin: 0;
     margin-right: auto;
     order: 2;
@@ -5014,9 +5573,39 @@ label[for="Windows"]::before {
   width: 280px;
   padding-left: 20px;
   padding-right: 20px;
-  background-color: blue;
-  min-height: 290px;
   margin: 0 auto;
+  padding-top: 32px;
+  padding-bottom: 10px;
+}
+.emotions__title {
+  display: block;
+  width: 280px;
+  text-align: center;
+  margin: 0 auto;
+  color: #d22856;
+  font-size: 14px;
+  line-height: 30px;
+  font-family: 'OpenSans';
+  src: url('../fonts/OpenSans.woff') format('woff'), url('../fonts/OpenSans.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  text-transform: uppercase;
+}
+.emotions__textarea {
+  box-sizing: border-box;
+  width: 280px;
+  min-height: 200px;
+  border: 2px solid #e5e5e5;
+  font-size: 18px;
+  line-height: 30px;
+  color: #283645;
+  font-family: 'OpenSans';
+  src: url('../fonts/OpenSans.woff') format('woff'), url('../fonts/OpenSans.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  padding: 13px 18px;
+  margin-top: 12px;
+  border-radius: 2px;
 }
 @media (min-width: 660px) {
   .emotions {
@@ -5028,9 +5617,49 @@ label[for="Windows"]::before {
     width: 620px;
     padding-left: 20px;
     padding-right: 20px;
-    background-color: blue;
-    min-height: 290px;
     margin: 0 auto;
+    padding-top: 55px;
+    padding-bottom: 10px;
+  }
+  .emotions__border {
+    position: relative;
+    border: 2px solid #e5e5e5;
+    padding-bottom: 48px;
+  }
+  .emotions__title {
+    position: absolute;
+    top: -15px;
+    left: 178px;
+    display: block;
+    width: 260px;
+    text-align: center;
+    margin: 0 auto;
+    color: #d22856;
+    background-color: #ffffff;
+    font-size: 14px;
+    line-height: 30px;
+    font-family: 'OpenSans';
+    src: url('../fonts/OpenSans.woff') format('woff'), url('../fonts/OpenSans.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    text-transform: uppercase;
+  }
+  .emotions__textarea {
+    box-sizing: border-box;
+    width: 500px;
+    min-height: 192px;
+    border: 2px solid #e5e5e5;
+    border-radius: 2px;
+    font-size: 18px;
+    line-height: 30px;
+    color: #283645;
+    font-family: 'OpenSans';
+    src: url('../fonts/OpenSans.woff') format('woff'), url('../fonts/OpenSans.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    padding: 13px 18px;
+    margin-top: 45px;
+    margin-left: 58px;
   }
 }
 @media (min-width: 1200px) {
@@ -5043,9 +5672,49 @@ label[for="Windows"]::before {
     width: 940px;
     padding-left: 10px;
     padding-right: 10px;
-    background-color: blue;
-    min-height: 290px;
     margin: 0 auto;
+    padding-top: 55px;
+    padding-bottom: 10px;
+  }
+  .emotions__border {
+    position: relative;
+    border: 2px solid #e5e5e5;
+    padding-bottom: 39px;
+  }
+  .emotions__title {
+    position: absolute;
+    top: -15px;
+    left: 338px;
+    display: block;
+    width: 260px;
+    text-align: center;
+    margin: 0 auto;
+    color: #d22856;
+    background-color: #ffffff;
+    font-size: 14px;
+    line-height: 30px;
+    font-family: 'OpenSans';
+    src: url('../fonts/OpenSans.woff') format('woff'), url('../fonts/OpenSans.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    text-transform: uppercase;
+  }
+  .emotions__textarea {
+    box-sizing: border-box;
+    width: 820px;
+    min-height: 128px;
+    border: 2px solid #e5e5e5;
+    border-radius: 2px;
+    font-size: 18px;
+    line-height: 30px;
+    color: #283645;
+    font-family: 'OpenSans';
+    src: url('../fonts/OpenSans.woff') format('woff'), url('../fonts/OpenSans.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    padding: 13px 18px;
+    margin-top: 42px;
+    margin-left: 58px;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -9,7 +9,6 @@
   width: 280px;
   padding-left: 20px;
   padding-right: 20px;
-  background-color: violet;
   margin: 0 auto;
   padding-top: 34px;
   padding-bottom: 27px;
@@ -123,15 +122,128 @@ label[for="email"]:hover #name {
     padding-left: 20px;
     padding-right: 20px;
     margin: 0 auto;
+    padding-top: 51px;
   }
 
   .personal-contacts__border {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
+    border: 2px solid #e5e5e5;
+    margin-top: 15px;
+    padding-left: 58px;
+    padding-top: 45px;
+    padding-bottom: 0px;
   }
 
   .personal-contacts__title {
     display: block;
+    position: absolute;
+    top: -15px;
+    left: 178px;
+    flex-shrink: 0;
+    display: block;
+    width: 260px;
+    text-align: center;
+    margin: 0 auto;
+    color: #d22856;
+    font-size: 14px;
+    line-height: 30px;
+    .font(@fontRegular, normal, normal);
+    text-transform: uppercase;
+    padding-top: 0px;
+    background-color: #ffffff;
+  }
+
+  #phone {
+    order: 2;
+  }
+
+  #email {
+    order: 4;
+  }
+
+  label[for="phone"] {
+    order: 3;
+  }
+
+  label[for="email"] {
+    order: 5;
+  }
+
+  #phone,
+  #email {
+    flex-shrink: 0;
+    box-sizing: border-box;
+    border: 2px solid #e5e5e5;
+    border-radius: 2px;
+    width: 500px;
+    background-color: transparent;
+    padding-top: 22px;
+    padding-bottom: 19px;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    outline: #d22856;
+
+    &:hover {
+      border-color: #283645;
+    }
+
+    &:focus {
+      border-color: #d22856;
+    }
+  }
+
+  label[for="phone"],
+  label[for="email"] {
+    position: relative;
+    flex-shrink: 0;
+    display: inline-block;
+    width: 280px;
+    font-size: 14px;
+    line-height: 30px;
+    .font(@fontRegular, normal, normal);
+    color: #d22856;
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 30px;
+    padding-left: 20px;
+    cursor: pointer;
+  }
+
+  label[for="phone"]:hover #surname {
+    border-color: #283645;
+  }
+
+  label[for="email"]:hover #name {
+    border-color: #283645;
+  }
+
+  label[for="email"] {
+    margin-bottom: 25px;
+  }
+
+  label[for="phone"]::after,
+  label[for="email"]::after {
+    content: "";
+    position: absolute;
+    top: -73px;
+    right: -200px;
+    display: block;
+    width: 62px;
+    height: 63px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    cursor: text;
+  }
+
+  label[for="phone"]::after {
+    background-image: url("../img/form/icon-telephone.svg");
+  }
+
+  label[for="email"]::after {
+    background-image: url("../img/form/icon-mail.svg");
   }
 }
 
@@ -146,8 +258,133 @@ label[for="email"]:hover #name {
     width: 940px;
     padding-left: 10px;
     padding-right: 10px;
-    background-color: violet;
-    min-height: 287px; //сетка
     margin: 0 auto;
+    padding-top: 30px;
+  }
+
+  .personal-contacts__border {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid #e5e5e5;
+    margin-top: 15px;
+    padding-left: 58px;
+    padding-top: 42px;
+    padding-bottom: 12px;
+  }
+
+  .personal-contacts__title {
+    display: block;
+    position: absolute;
+    top: -15px;
+    left: 338px;
+    flex-shrink: 0;
+    display: block;
+    width: 260px;
+    text-align: center;
+    margin: 0 auto;
+    color: #d22856;
+    font-size: 14px;
+    line-height: 30px;
+    .font(@fontRegular, normal, normal);
+    text-transform: uppercase;
+    padding-top: 0px;
+    background-color: #ffffff;
+  }
+
+  #phone {
+    order: 2;
+  }
+
+  #email {
+    order: 3;
+  }
+
+  label[for="phone"] {
+    order: 4;
+  }
+
+  label[for="email"] {
+    order: 5;
+  }
+
+  #phone,
+  #email {
+    flex-shrink: 0;
+    box-sizing: border-box;
+    border: 2px solid #e5e5e5;
+    border-radius: 2px;
+    width: 375px;
+    background-color: transparent;
+    padding-top: 22px;
+    padding-bottom: 19px;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    outline: #d22856;
+
+    &:hover {
+      border-color: #283645;
+    }
+
+    &:focus {
+      border-color: #d22856;
+    }
+  }
+
+  #email {
+    margin-left: 70px;
+  }
+
+  label[for="phone"],
+  label[for="email"] {
+    position: relative;
+    flex-shrink: 0;
+    display: inline-block;
+    width: 375px;
+    font-size: 14px;
+    line-height: 30px;
+    .font(@fontRegular, normal, normal);
+    color: #d22856;
+    text-transform: uppercase;
+    margin: 0;
+    margin-bottom: 0px;
+    padding-left: 20px;
+    cursor: pointer;
+  }
+
+  label[for="phone"]:hover #surname {
+    border-color: #283645;
+  }
+
+  label[for="email"]:hover #name {
+    border-color: #283645;
+  }
+
+  label[for="email"] {
+    margin-bottom: 0px;
+    margin-left: 50px;
+  }
+
+  label[for="phone"]::after,
+  label[for="email"]::after {
+    content: "";
+    position: absolute;
+    top: -73px;
+    right: 20px;
+    display: block;
+    width: 62px;
+    height: 63px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    cursor: text;
+  }
+
+  label[for="phone"]::after {
+    background-image: url("../img/form/icon-telephone.svg");
+  }
+
+  label[for="email"]::after {
+    background-image: url("../img/form/icon-mail.svg");
   }
 }

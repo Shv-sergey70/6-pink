@@ -6,15 +6,18 @@
 }
 
 .achievement__wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  align-content: flex-start;
   width: 280px;
   padding-left: 20px;
   padding-right: 20px;
   margin: 0 auto;
   padding-top: 38px;
+}
+
+.achievement__border {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
 }
 
 .achievement__title {
@@ -70,12 +73,12 @@ label[for="hotel"] {
     display: none;
     position: absolute;
     left: 0px;
-    width: 22px;
-    height: 11px;
+    width: 20px;
+    height: 8px;
     background-color: transparent;
     border-left: 3px solid #d22856;
     border-bottom: 3px solid #d22856;
-    transform: translateY(50%) translateX(25%) rotate(-45deg);
+    transform: translateY(50%) translateX(40%) rotate(-45deg);
   }
 }
 
@@ -95,7 +98,7 @@ label[for="hotel"] {
 @media (min-width: @tablet-width) {
   .achievement {
     flex-shrink: 0;
-    background-color: #f2f2f2;
+    background-color: #ffffff;
     margin: 0 auto;
     order: 4;
   }
@@ -104,16 +107,110 @@ label[for="hotel"] {
     width: 620px;
     padding-left: 20px;
     padding-right: 20px;
-    background-color: pink;
-    min-height: 604px; //сетка
     margin: 0 auto;
+    padding-top: 23px;
+    margin-bottom: 10px;
+  }
+
+  .achievement__border {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid #e5e5e5;
+    margin-top: 15px;
+    padding-left: 58px;
+    padding-top: 42px;
+    padding-bottom: 7px;
+  }
+
+  .achievement__title {
+    position: absolute;
+    top: -10px;
+    left: 90px;
+    flex-shrink: 0;
+    display: block;
+    background-color: #ffffff;
+    width: 436px;
+    text-align: center;
+    margin: 0 auto;
+    color: #d22856;
+    font-size: 14px;
+    line-height: 18px;
+    .font(@fontRegular, normal, normal);
+    text-transform: uppercase;
+  }
+
+  .achievement__wrapper input {
+    display: none;
+  }
+
+  label[for="selfi"] {
+    margin-top: 15px;
+  }
+
+  label[for="selfi"],
+  label[for="burn"],
+  label[for="norris"],
+  label[for="souvenirs"],
+  label[for="tower"],
+  label[for="hotel"] {
+    position: relative;
+    width: 280px;
+    padding-left: 60px;
+    color: #283645;
+    font-size: 18px;
+    line-height: 30px;
+    .font(@fontRegular, normal, normal);
+    margin-bottom: 52px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0px;
+      top: -4px;
+      width: 39px;
+      height: 39px;
+      box-sizing: border-box;
+      background-color: #ffffff;
+      border: 2px solid #e5e5e5;
+    }
+
+    &::after {
+      content: "";
+      display: none;
+      position: absolute;
+      left: 0px;
+      width: 20px;
+      height: 8px;
+      background-color: transparent;
+      border-left: 3px solid #d22856;
+      border-bottom: 3px solid #d22856;
+      transform: translateY(50%) translateX(40%) rotate(-45deg);
+    }
+  }
+
+  label[for="hotel"] {
+    margin-bottom: 45px;
+  }
+
+  #selfi:checked ~ label[for="selfi"]::after,
+  #burn:checked ~ label[for="burn"]::after,
+  #norris:checked ~ label[for="norris"]::after,
+  #souvenirs:checked ~ label[for="souvenirs"]::after,
+  #tower:checked ~ label[for="tower"]::after,
+  #hotel:checked ~ label[for="hotel"]::after {
+    display: inline;
   }
 }
 
 @media (min-width: @desktop-width) {
   .achievement {
     flex-shrink: 0;
-    background-color: #f2f2f2;
+    background-color: #ffffff;
     margin: 0 auto;
     order: 4;
   }
@@ -122,8 +219,130 @@ label[for="hotel"] {
     width: 940px;
     padding-left: 10px;
     padding-right: 10px;
-    background-color: pink;
-    min-height: 604px; //сетка
     margin: 0 auto;
+    padding-top: 23px;
+    margin-bottom: 10px;
+  }
+
+  .achievement__border {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid #e5e5e5;
+    margin-top: 15px;
+    padding-left: 58px;
+    padding-top: 57px;
+    padding-bottom: 8px;
+  }
+
+  .achievement__title {
+    position: absolute;
+    top: -9px;
+    left: 250px;
+    flex-shrink: 0;
+    display: block;
+    background-color: #ffffff;
+    width: 436px;
+    text-align: center;
+    margin: 0 auto;
+    color: #d22856;
+    font-size: 14px;
+    line-height: 18px;
+    .font(@fontRegular, normal, normal);
+    text-transform: uppercase;
+  }
+
+  .achievement__wrapper input {
+    display: none;
+  }
+
+  label[for="selfi"] {
+    margin-top: 0px;
+  }
+
+  label[for="selfi"],
+  label[for="burn"],
+  label[for="norris"],
+  label[for="souvenirs"],
+  label[for="tower"],
+  label[for="hotel"] {
+    position: relative;
+    width: 200px;
+    padding-left: 60px;
+    color: #283645;
+    font-size: 18px;
+    line-height: 30px;
+    .font(@fontRegular, normal, normal);
+    margin-bottom: 52px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0px;
+      top: -4px;
+      width: 39px;
+      height: 39px;
+      box-sizing: border-box;
+      background-color: #ffffff;
+      border: 2px solid #e5e5e5;
+    }
+
+    &::after {
+      content: "";
+      display: none;
+      position: absolute;
+      left: 0px;
+      width: 20px;
+      height: 8px;
+      background-color: transparent;
+      border-left: 3px solid #d22856;
+      border-bottom: 3px solid #d22856;
+      transform: translateY(50%) translateX(40%) rotate(-45deg);
+    }
+  }
+
+  label[for="hotel"] {
+    margin-bottom: 45px;
+  }
+
+  #selfi:checked ~ label[for="selfi"]::after,
+  #burn:checked ~ label[for="burn"]::after,
+  #norris:checked ~ label[for="norris"]::after,
+  #souvenirs:checked ~ label[for="souvenirs"]::after,
+  #tower:checked ~ label[for="tower"]::after,
+  #hotel:checked ~ label[for="hotel"]::after {
+    display: inline;
+  }
+
+  label[for="selfi"] {
+    order: 2;
+  }
+
+  label[for="burn"] {
+    order: 5;
+  }
+
+  label[for="norris"] {
+    order: 3;
+    margin-left: 55px;
+  }
+
+  label[for="souvenirs"] {
+    order: 6;
+    margin-left: 55px;
+  }
+
+  label[for="tower"] {
+    order: 4;
+    margin-left: 35px;
+  }
+
+  label[for="hotel"] {
+    order: 7;
+    margin-left: 35px;
   }
 }
