@@ -5511,6 +5511,7 @@ label[for="Windows"]:active::before {
 }
 @media (min-width: 1200px) {
   .personal-device {
+    width: 470px;
     flex-shrink: 0;
     background-color: #ffffff;
     margin: 0;
