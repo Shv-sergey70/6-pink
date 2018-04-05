@@ -7,12 +7,14 @@
     "@htmlacademy/editorconfig-cli": "1.x",
     "browser-sync": "^2.23.6",
     "stylelint": "8.4.x",
+    "gulp": "3.9.1",
     "stylelint-config-htmlacademy": "0.1.x"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint .",
-    "test": "npm run editorconfig"
+    "test": "npm run editorconfig",
+    "start": "gulp"
   },
   "editorconfig-cli": [
     "*.json",
